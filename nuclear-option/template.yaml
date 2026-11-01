@@ -40,7 +40,7 @@ spec:
 
   # Digest-pinned image; no version catalog needed for this game.
   # Built, published and cosign-signed by Gameplane's images.yaml from images/games/nuclear-option.
-  image: ghcr.io/gameplanepanel/gameplane/nuclear-option@sha256:acaeb3b7f0ab55bf6efe678b74745ed1a437ff97bf6d52cd26844efd28c13ce6
+  image: ghcr.io/gameplanepanel/gameplane/nuclear-option:latest@sha256:f2116ed7dc7cfb6e026fabc0f846027a2121db156c4b9055a034129daba2b0d3
 
   # REQUIRED. The image runs as non-root (uid/gid 10000), so spec.security.runAsUser
   # must be set to match numerically. fsGroup ensures the non-root user can write

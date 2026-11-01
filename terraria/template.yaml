@@ -34,7 +34,7 @@ spec:
 
   # Fallback image when a server selects no version. versions[] below is the
   # authoritative source for the wizard's picker.
-  image: passivelemon/terraria-docker:terraria-latest@sha256:d60f280522d6c71079638b5036bdd6c4ac9f93c9f3250477ddb345fc2c6933f3
+  image: passivelemon/terraria-docker:terraria-latest@sha256:682d932507262044519dfc2ed25edc4e3d77a524648613f3fafa0db3dbeb3b35
 
   # passivelemon's tModLoader scripts exit when MODPACK is blank or its
   # ModPacks/<pack>/Mods/enabled.json is missing. On tModLoader images
@@ -123,12 +123,12 @@ spec:
   versions:
     - id: vanilla-latest
       displayName: "Vanilla · latest"
-      image: passivelemon/terraria-docker:terraria-latest@sha256:d60f280522d6c71079638b5036bdd6c4ac9f93c9f3250477ddb345fc2c6933f3
+      image: passivelemon/terraria-docker:terraria-latest@sha256:682d932507262044519dfc2ed25edc4e3d77a524648613f3fafa0db3dbeb3b35
       loader: vanilla
       default: true
     - id: tmodloader-latest
       displayName: "tModLoader · latest"
-      image: passivelemon/terraria-docker:tmodloader-latest@sha256:3f2d8703421159f1037084bd2c0901a3a63b85a00801cf36f6f928e8b666b44e
+      image: passivelemon/terraria-docker:tmodloader-latest@sha256:4e1607847a5fdc0318f41f0e7ec12242626165b933b1d6157897e49cae194cbc
       loader: tmodloader
       env:
         - name: GP_LOADER
@@ -138,7 +138,7 @@ spec:
     # mod sets than the plain latest tag.
     - id: tmodloader-2026
       displayName: "tModLoader · 2026 stable"
-      image: passivelemon/terraria-docker:tmodloader-2026@sha256:3f2d8703421159f1037084bd2c0901a3a63b85a00801cf36f6f928e8b666b44e
+      image: passivelemon/terraria-docker:tmodloader-2026@sha256:4e1607847a5fdc0318f41f0e7ec12242626165b933b1d6157897e49cae194cbc
       loader: tmodloader
       env:
         - name: GP_LOADER

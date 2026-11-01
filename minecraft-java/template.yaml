@@ -37,7 +37,7 @@ spec:
   # Fallback image when a server selects no version (versions[] is the
   # authoritative source for the wizard). The tag only pins the itzg
   # release / Java runtime — TYPE and VERSION env select the software.
-  image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+  image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
 
   # INIT_MEMORY/MAX_MEMORY are configSchema fields (schema-resolved config
   # overrides template env on name collisions), so the JVM heap is visible
@@ -98,21 +98,21 @@ spec:
     # ── Latest (moving) ────────────────────────────────────────────────
     - id: "latest-paper"
       displayName: "Latest · Paper"
-      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      image: itzg/minecraft-server:java25@sha256:f7f2222512810f0f0e85133913622cf639be77a5dd1d4b11f24ab675da6ba742
       loader: paper
       env:
         - { name: TYPE, value: PAPER }
         - { name: VERSION, value: LATEST }
     - id: "latest-fabric"
       displayName: "Latest · Fabric"
-      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      image: itzg/minecraft-server:java25@sha256:f7f2222512810f0f0e85133913622cf639be77a5dd1d4b11f24ab675da6ba742
       loader: fabric
       env:
         - { name: TYPE, value: FABRIC }
         - { name: VERSION, value: LATEST }
     - id: "latest-vanilla"
       displayName: "Latest · Vanilla"
-      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      image: itzg/minecraft-server:java25@sha256:f7f2222512810f0f0e85133913622cf639be77a5dd1d4b11f24ab675da6ba742
       loader: vanilla
       env:
         - { name: TYPE, value: VANILLA }
@@ -120,7 +120,7 @@ spec:
     # ── 1.21.4 ─────────────────────────────────────────────────────────
     - id: "1.21.4-paper"
       displayName: "1.21.4 · Paper"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: paper
       gameVersion: "1.21.4"
       default: true
@@ -129,7 +129,7 @@ spec:
         - { name: VERSION, value: "1.21.4" }
     - id: "1.21.4-purpur"
       displayName: "1.21.4 · Purpur"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: purpur
       gameVersion: "1.21.4"
       env:
@@ -137,7 +137,7 @@ spec:
         - { name: VERSION, value: "1.21.4" }
     - id: "1.21.4-fabric"
       displayName: "1.21.4 · Fabric"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: fabric
       gameVersion: "1.21.4"
       env:
@@ -145,7 +145,7 @@ spec:
         - { name: VERSION, value: "1.21.4" }
     - id: "1.21.4-quilt"
       displayName: "1.21.4 · Quilt"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: quilt
       gameVersion: "1.21.4"
       env:
@@ -153,7 +153,7 @@ spec:
         - { name: VERSION, value: "1.21.4" }
     - id: "1.21.4-forge"
       displayName: "1.21.4 · Forge"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: forge
       gameVersion: "1.21.4"
       env:
@@ -161,7 +161,7 @@ spec:
         - { name: VERSION, value: "1.21.4" }
     - id: "1.21.4-neoforge"
       displayName: "1.21.4 · NeoForge"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: neoforge
       gameVersion: "1.21.4"
       env:
@@ -169,7 +169,7 @@ spec:
         - { name: VERSION, value: "1.21.4" }
     - id: "1.21.4-vanilla"
       displayName: "1.21.4 · Vanilla"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: vanilla
       gameVersion: "1.21.4"
       env:
@@ -178,7 +178,7 @@ spec:
     # ── 1.21.1 (NeoForge LTS line) ─────────────────────────────────────
     - id: "1.21.1-paper"
       displayName: "1.21.1 · Paper"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: paper
       gameVersion: "1.21.1"
       env:
@@ -186,7 +186,7 @@ spec:
         - { name: VERSION, value: "1.21.1" }
     - id: "1.21.1-fabric"
       displayName: "1.21.1 · Fabric"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: fabric
       gameVersion: "1.21.1"
       env:
@@ -194,7 +194,7 @@ spec:
         - { name: VERSION, value: "1.21.1" }
     - id: "1.21.1-neoforge"
       displayName: "1.21.1 · NeoForge"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: neoforge
       gameVersion: "1.21.1"
       env:
@@ -202,7 +202,7 @@ spec:
         - { name: VERSION, value: "1.21.1" }
     - id: "1.21.1-vanilla"
       displayName: "1.21.1 · Vanilla"
-      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      image: itzg/minecraft-server:java21@sha256:f6d0b91029e73afd765ae8b0689cdac754067f3e36cb2d60608366f82d650008
       loader: vanilla
       gameVersion: "1.21.1"
       env:
@@ -211,7 +211,7 @@ spec:
     # ── 1.20.x ─────────────────────────────────────────────────────────
     - id: "1.20.4-paper"
       displayName: "1.20.4 · Paper"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: paper
       gameVersion: "1.20.4"
       env:
@@ -219,7 +219,7 @@ spec:
         - { name: VERSION, value: "1.20.4" }
     - id: "1.20.4-fabric"
       displayName: "1.20.4 · Fabric"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: fabric
       gameVersion: "1.20.4"
       env:
@@ -227,7 +227,7 @@ spec:
         - { name: VERSION, value: "1.20.4" }
     - id: "1.20.4-forge"
       displayName: "1.20.4 · Forge"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: forge
       gameVersion: "1.20.4"
       env:
@@ -235,7 +235,7 @@ spec:
         - { name: VERSION, value: "1.20.4" }
     - id: "1.20.1-paper"
       displayName: "1.20.1 · Paper"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: paper
       gameVersion: "1.20.1"
       env:
@@ -243,7 +243,7 @@ spec:
         - { name: VERSION, value: "1.20.1" }
     - id: "1.20.1-fabric"
       displayName: "1.20.1 · Fabric"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: fabric
       gameVersion: "1.20.1"
       env:
@@ -251,7 +251,7 @@ spec:
         - { name: VERSION, value: "1.20.1" }
     - id: "1.20.1-forge"
       displayName: "1.20.1 · Forge"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: forge
       gameVersion: "1.20.1"
       env:
@@ -260,7 +260,7 @@ spec:
     # ── 1.19.4 / 1.18.2 (classic modded era) ───────────────────────────
     - id: "1.19.4-paper"
       displayName: "1.19.4 · Paper"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: paper
       gameVersion: "1.19.4"
       env:
@@ -268,7 +268,7 @@ spec:
         - { name: VERSION, value: "1.19.4" }
     - id: "1.19.4-forge"
       displayName: "1.19.4 · Forge"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: forge
       gameVersion: "1.19.4"
       env:
@@ -276,7 +276,7 @@ spec:
         - { name: VERSION, value: "1.19.4" }
     - id: "1.18.2-paper"
       displayName: "1.18.2 · Paper"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: paper
       gameVersion: "1.18.2"
       env:
@@ -284,7 +284,7 @@ spec:
         - { name: VERSION, value: "1.18.2" }
     - id: "1.18.2-forge"
       displayName: "1.18.2 · Forge"
-      image: itzg/minecraft-server:java17@sha256:bc3a9368c380398965b9221838f96c69ad07829ab0610adeacd9af123e6c0dfc
+      image: itzg/minecraft-server:java17@sha256:a08cd9ced3e1c3f46a318af1fa393de21698afbf8746681f115dc923ba847ba5
       loader: forge
       gameVersion: "1.18.2"
       env:
@@ -293,7 +293,7 @@ spec:
     # ── 1.16.5 (Java 8 era) ────────────────────────────────────────────
     - id: "1.16.5-paper"
       displayName: "1.16.5 · Paper"
-      image: itzg/minecraft-server:java8-multiarch@sha256:d29dddde92fe6811f90d430b10ff6b382121533000992673fb5f8a316cc2e5e6
+      image: itzg/minecraft-server:java8-multiarch@sha256:73cfcc725460c74ce9b66250e417d1eff5dc53ce95308ce07bca21972d4a87f3
       loader: paper
       gameVersion: "1.16.5"
       env:
@@ -301,7 +301,7 @@ spec:
         - { name: VERSION, value: "1.16.5" }
     - id: "1.16.5-forge"
       displayName: "1.16.5 · Forge"
-      image: itzg/minecraft-server:java8-multiarch@sha256:d29dddde92fe6811f90d430b10ff6b382121533000992673fb5f8a316cc2e5e6
+      image: itzg/minecraft-server:java8-multiarch@sha256:73cfcc725460c74ce9b66250e417d1eff5dc53ce95308ce07bca21972d4a87f3
       loader: forge
       gameVersion: "1.16.5"
       env:

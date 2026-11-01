@@ -32,7 +32,7 @@ spec:
     the console and the broadcast/stop actions; Metamod and
     CounterStrikeSharp plugins install under `game/csgo/addons`.
 
-  image: joedwards32/cs2:latest@sha256:41b826d6280d1aa9e41c866a6d88cc7f523e027f16c47a313b20c2d7a17f2680
+  image: joedwards32/cs2:latest@sha256:4cb42b7f3ff261efc1c253cbfdef0b02fa1e069de53d9246644ca02984da3f04
 
   versions:
     - id: 4-0-1

@@ -24,7 +24,7 @@ spec:
     skirmish, battle, and siege match hosting. Interactive console connects
     via container PTY stdin/stdout.
 
-  image: ghcr.io/gameplanepanel/gameplane/mount-and-blade-2-bannerlord:latest@sha256:ac4796548429fce3bf1990839b75002f08ee8d6c11260bc4a26329f5a7d93717
+  image: ghcr.io/gameplanepanel/gameplane/mount-and-blade-2-bannerlord:latest@sha256:53c65274b10cc14b3cb11dbc826009e9422f5f1d334c139308b3802f2db10bb4
 
   security:
     runAsUser: 10000

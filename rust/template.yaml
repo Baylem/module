@@ -36,7 +36,7 @@ spec:
     (Facepunch's webrcon). Oxide plugins are supported via the version
     picker.
 
-  image: didstopia/rust-server:latest@sha256:a16589d9182245faee4353cd99e59965e6a9bec17d3d757bb427c48a17546a2b
+  image: didstopia/rust-server:latest@sha256:c60a3ab044eb69019616951087834468aed478a11b449391376b23db05ddc38a
 
   ports:
     - name: game
@@ -155,14 +155,14 @@ spec:
   versions:
     - id: vanilla
       displayName: Vanilla
-      image: didstopia/rust-server:latest@sha256:a16589d9182245faee4353cd99e59965e6a9bec17d3d757bb427c48a17546a2b
+      image: didstopia/rust-server:latest@sha256:c60a3ab044eb69019616951087834468aed478a11b449391376b23db05ddc38a
       loader: vanilla
       default: true
       env:
         - { name: RUST_OXIDE_ENABLED, value: "0" }
     - id: oxide
       displayName: Oxide
-      image: didstopia/rust-server:latest@sha256:a16589d9182245faee4353cd99e59965e6a9bec17d3d757bb427c48a17546a2b
+      image: didstopia/rust-server:latest@sha256:c60a3ab044eb69019616951087834468aed478a11b449391376b23db05ddc38a
       loader: oxide
       env:
         - { name: RUST_OXIDE_ENABLED, value: "1" }

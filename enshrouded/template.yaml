@@ -12,7 +12,7 @@ spec:
   categories: [Survival, Co-op, Building, Adventure]
   accentColor: "#2a4b7c"
   description: Enshrouded dedicated server.
-  image: mornedhels/enshrouded-server:latest@sha256:85978a10f88a85ab0a0aa92e9821d30424895d38bf81fe543532451219c42d0d
+  image: mornedhels/enshrouded-server:latest@sha256:160d469d7a2dbed3a8dac2b1904df387302bfa0f524a26344582e1b76ca46fe4
 
   versions:
     - id: 1-7-2

@@ -25,7 +25,7 @@ spec:
     tModLoader dedicated server for modded Terraria. Supports custom `.tmod`
     mods and modpacks with interactive console via container stdin (PTY).
 
-  image: passivelemon/terraria-docker:tmodloader-latest@sha256:3f2d8703421159f1037084bd2c0901a3a63b85a00801cf36f6f928e8b666b44e
+  image: passivelemon/terraria-docker:tmodloader-latest@sha256:4e1607847a5fdc0318f41f0e7ec12242626165b933b1d6157897e49cae194cbc
 
   env:
     - name: GP_LOADER

@@ -25,12 +25,12 @@ spec:
     The whole game install lives on the `/data` volume, so server configuration
     (`/data/SquadGame/ServerConfig`) and match logs persist there.
 
-  image: ghcr.io/gameplanepanel/gameplane/squad:latest@sha256:c96561c975b1cd049668da930582181de7ac8d74e5d8d2251080423ec2ee2748
+  image: ghcr.io/gameplanepanel/gameplane/squad:latest@sha256:2eccdded9a056e0beb75f29c54e5ea9841f5e997522810cf81278673db80c204
 
   versions:
     - id: latest
       displayName: "Latest (UE4)"
-      image: ghcr.io/gameplanepanel/gameplane/squad:latest@sha256:c96561c975b1cd049668da930582181de7ac8d74e5d8d2251080423ec2ee2748
+      image: ghcr.io/gameplanepanel/gameplane/squad:latest@sha256:2eccdded9a056e0beb75f29c54e5ea9841f5e997522810cf81278673db80c204
       default: true
 
   security:

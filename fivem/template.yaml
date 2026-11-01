@@ -25,7 +25,7 @@ spec:
     database supervision. Remote console and commands operate via txAdmin's
     REST API.
 
-  image: ghcr.io/gameplanepanel/gameplane/fivem:latest@sha256:23d65f59793e5f207c4c4ee5c320bca5aa56003fd95be259a887f4e58f3d77b1
+  image: ghcr.io/gameplanepanel/gameplane/fivem:latest@sha256:3abdbd6f54e8ce0a225921491ce33f91536bcfa809420db0d9957def50e3b9cb
 
   env:
     - name: HOME

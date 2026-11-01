@@ -65,7 +65,7 @@ spec:
 
   # Fallback image when a server selects no version. versions[] below is the
   # authoritative source for the wizard's picker.
-  image: wolveix/satisfactory-server:latest@sha256:e103700ae6ae4c50f19dac80eadb2a805c5b885e179ae2a40850e967bf189efd
+  image: wolveix/satisfactory-server:latest@sha256:ac252dba41653eb21c6feed94b577f98fa152f5792b1aeff2ce11fe364355137
 
   env:
     # Install/update the game via steamcmd at container start. Required on the
@@ -134,14 +134,14 @@ spec:
   versions:
     - id: stable
       displayName: "Stable"
-      image: wolveix/satisfactory-server:latest@sha256:e103700ae6ae4c50f19dac80eadb2a805c5b885e179ae2a40850e967bf189efd
+      image: wolveix/satisfactory-server:latest@sha256:ac252dba41653eb21c6feed94b577f98fa152f5792b1aeff2ce11fe364355137
       default: true
       env:
         - name: STEAMBETA
           value: "false"
     - id: experimental
       displayName: "Experimental"
-      image: wolveix/satisfactory-server:latest@sha256:e103700ae6ae4c50f19dac80eadb2a805c5b885e179ae2a40850e967bf189efd
+      image: wolveix/satisfactory-server:latest@sha256:ac252dba41653eb21c6feed94b577f98fa152f5792b1aeff2ce11fe364355137
       env:
         - name: STEAMBETA
           value: "true"

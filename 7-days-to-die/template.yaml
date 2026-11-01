@@ -56,7 +56,7 @@ spec:
     Gameplane's single data volume can't all cover at once, and world
     persistence was the fix this template needed.
 
-  image: vinanrra/7dtd-server:latest@sha256:e3c479866744a65c1bec2b1a4691e08baff2938cf674d4674cd9e8975cd21e4c
+  image: vinanrra/7dtd-server:latest@sha256:ef68d148a293be39683f07a02b6568f23549e26ef02b778311290a420f20ea5f
 
   versions:
     - id: v0-9-3
