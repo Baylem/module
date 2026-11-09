@@ -1,92 +1,74 @@
 {
   "config.BACKUPS.description": {
     "defaultMessage": "L’image lloesche effectue aussi des sauvegardes. Le CRD Gameplane Backup est la voie privilégiée ; laisser désactivé.",
-    "description": "Help text of configuration field BACKUPS (template.yaml spec.configSchema)",
-    "sourceHash": "5b9fa10ca05c"
+    "description": "Help text of configuration field BACKUPS (template.yaml spec.configSchema)"
   },
   "config.BACKUPS.displayName": {
     "defaultMessage": "Sauvegardes dans le conteneur",
-    "description": "Label of configuration field BACKUPS (template.yaml spec.configSchema)",
-    "sourceHash": "302740a58919"
+    "description": "Label of configuration field BACKUPS (template.yaml spec.configSchema)"
   },
   "config.BEPINEX.description": {
     "defaultMessage": "Active le chargeur de mods BepInEx. Requis pour utiliser l’onglet Mods.",
-    "description": "Help text of configuration field BEPINEX (template.yaml spec.configSchema)",
-    "sourceHash": "1a5abaec514d"
+    "description": "Help text of configuration field BEPINEX (template.yaml spec.configSchema)"
   },
   "config.BEPINEX.displayName": {
     "defaultMessage": "Activer les mods BepInEx",
-    "description": "Label of configuration field BEPINEX (template.yaml spec.configSchema)",
-    "sourceHash": "3d24a4fe4278"
+    "description": "Label of configuration field BEPINEX (template.yaml spec.configSchema)"
   },
   "config.SERVER_NAME.displayName": {
     "defaultMessage": "Nom du serveur",
-    "description": "Label of configuration field SERVER_NAME (template.yaml spec.configSchema)",
-    "sourceHash": "21babfed6c38"
+    "description": "Label of configuration field SERVER_NAME (template.yaml spec.configSchema)"
   },
   "config.SERVER_PASS.description": {
     "defaultMessage": "5 caractères minimum. Exigé par Valheim.",
-    "description": "Help text of configuration field SERVER_PASS (template.yaml spec.configSchema)",
-    "sourceHash": "74055d0caf07"
+    "description": "Help text of configuration field SERVER_PASS (template.yaml spec.configSchema)"
   },
   "config.SERVER_PASS.displayName": {
     "defaultMessage": "Mot de passe",
-    "description": "Label of configuration field SERVER_PASS (template.yaml spec.configSchema)",
-    "sourceHash": "e7cf3ef4f17c"
+    "description": "Label of configuration field SERVER_PASS (template.yaml spec.configSchema)"
   },
   "config.SERVER_PUBLIC.displayName": {
     "defaultMessage": "Afficher publiquement",
-    "description": "Label of configuration field SERVER_PUBLIC (template.yaml spec.configSchema)",
-    "sourceHash": "db76e85987cd"
+    "description": "Label of configuration field SERVER_PUBLIC (template.yaml spec.configSchema)"
   },
   "config.UPDATE_CRON.description": {
     "defaultMessage": "Moment où vérifier sur Steam une mise à jour du jeu. Vide pour désactiver.",
-    "description": "Help text of configuration field UPDATE_CRON (template.yaml spec.configSchema)",
-    "sourceHash": "07cc74f7f4ba"
+    "description": "Help text of configuration field UPDATE_CRON (template.yaml spec.configSchema)"
   },
   "config.UPDATE_CRON.displayName": {
     "defaultMessage": "Cron de mise à jour automatique",
-    "description": "Label of configuration field UPDATE_CRON (template.yaml spec.configSchema)",
-    "sourceHash": "ead58a8bc5ca"
+    "description": "Label of configuration field UPDATE_CRON (template.yaml spec.configSchema)"
   },
   "config.WORLD_NAME.displayName": {
     "defaultMessage": "Monde",
-    "description": "Label of configuration field WORLD_NAME (template.yaml spec.configSchema)",
-    "sourceHash": "78ae647dc554"
+    "description": "Label of configuration field WORLD_NAME (template.yaml spec.configSchema)"
   },
   "mods.bepinex.displayName": {
     "defaultMessage": "Plugins BepInEx",
-    "description": "Label of the mod volume bepinex in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "062e916b738a"
+    "description": "Label of the mod volume bepinex in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "module.displayName": {
     "defaultMessage": "Valheim (serveur dédié)",
-    "description": "Display name of the module (module.yaml displayName)",
-    "sourceHash": "438a3d5c37f2"
+    "description": "Display name of the module (module.yaml displayName)"
   },
   "module.summary": {
     "defaultMessage": "Serveur dédié Valheim (lloesche/valheim-server) avec un sélecteur de canal stable / test public, un volume de mods BepInEx et la recherche Thunderstore intégrée. Compatible crossplay.",
-    "description": "One-line summary of the module (module.yaml summary)",
-    "sourceHash": "ab81114d04cc"
+    "description": "One-line summary of the module (module.yaml summary)"
   },
   "template.description": {
     "defaultMessage": "Serveur dédié Valheim utilisant\n[lloesche/valheim-server](https://github.com/lloesche/valheim-server-docker).\nPersistance du monde, mot de passe, crossplay et mods BepInEx. Choisissez le canal stable ou public-test dans l’assistant Nouveau serveur.\n",
-    "description": "Description of the game template (template.yaml spec.description)",
-    "sourceHash": "1f8aa55e7aa0"
+    "description": "Description of the game template (template.yaml spec.description)"
   },
   "template.displayName": {
     "defaultMessage": "Valheim (serveur dédié)",
-    "description": "Display name of the game template (template.yaml spec.displayName)",
-    "sourceHash": "438a3d5c37f2"
+    "description": "Display name of the game template (template.yaml spec.displayName)"
   },
   "versions.public-test.displayName": {
     "defaultMessage": "Test public (bêta)",
-    "description": "Label of game version public-test in the version picker (template.yaml spec.versions)",
-    "sourceHash": "3df61c7b634e"
+    "description": "Label of game version public-test in the version picker (template.yaml spec.versions)"
   },
   "versions.stable.displayName": {
     "defaultMessage": "Stable",
-    "description": "Label of game version stable in the version picker (template.yaml spec.versions)",
-    "sourceHash": "90ee305714d7"
+    "description": "Label of game version stable in the version picker (template.yaml spec.versions)"
   }
 }

@@ -1,347 +1,278 @@
 {
   "actions.ban-player.description": {
     "defaultMessage": "Déconnecte et bannit un joueur.",
-    "description": "Help text of server action ban-player (template.yaml spec.capabilities.actions)",
-    "sourceHash": "5a801f877f2e"
+    "description": "Help text of server action ban-player (template.yaml spec.capabilities.actions)"
   },
   "actions.ban-player.displayName": {
     "defaultMessage": "Bannir un joueur",
-    "description": "Label of server action ban-player (template.yaml spec.capabilities.actions)",
-    "sourceHash": "786e9ee3245e"
+    "description": "Label of server action ban-player (template.yaml spec.capabilities.actions)"
   },
   "actions.ban-player.group": {
     "defaultMessage": "Joueurs",
-    "description": "Group heading of server action ban-player (template.yaml spec.capabilities.actions)",
-    "sourceHash": "84e12ac655dd"
+    "description": "Group heading of server action ban-player (template.yaml spec.capabilities.actions)"
   },
   "actions.ban-player.params.player.displayName": {
     "defaultMessage": "Nom du joueur",
-    "description": "Label of parameter player of server action ban-player (template.yaml spec.capabilities.actions)",
-    "sourceHash": "8a6f25d4bf5c"
+    "description": "Label of parameter player of server action ban-player (template.yaml spec.capabilities.actions)"
   },
   "actions.broadcast.displayName": {
     "defaultMessage": "Diffuser un message",
-    "description": "Label of server action broadcast (template.yaml spec.capabilities.actions)",
-    "sourceHash": "059e3fa3f652"
+    "description": "Label of server action broadcast (template.yaml spec.capabilities.actions)"
   },
   "actions.broadcast.group": {
     "defaultMessage": "Serveur",
-    "description": "Group heading of server action broadcast (template.yaml spec.capabilities.actions)",
-    "sourceHash": "aef7de28d529"
+    "description": "Group heading of server action broadcast (template.yaml spec.capabilities.actions)"
   },
   "actions.broadcast.params.message.displayName": {
     "defaultMessage": "Message",
-    "description": "Label of parameter message of server action broadcast (template.yaml spec.capabilities.actions)",
-    "sourceHash": "2f77668a9dfb"
+    "description": "Label of parameter message of server action broadcast (template.yaml spec.capabilities.actions)"
   },
   "actions.kick-player.description": {
     "defaultMessage": "Déconnecte un joueur du serveur.",
-    "description": "Help text of server action kick-player (template.yaml spec.capabilities.actions)",
-    "sourceHash": "ac513f624f32"
+    "description": "Help text of server action kick-player (template.yaml spec.capabilities.actions)"
   },
   "actions.kick-player.displayName": {
     "defaultMessage": "Expulser un joueur",
-    "description": "Label of server action kick-player (template.yaml spec.capabilities.actions)",
-    "sourceHash": "412547a648ba"
+    "description": "Label of server action kick-player (template.yaml spec.capabilities.actions)"
   },
   "actions.kick-player.group": {
     "defaultMessage": "Joueurs",
-    "description": "Group heading of server action kick-player (template.yaml spec.capabilities.actions)",
-    "sourceHash": "84e12ac655dd"
+    "description": "Group heading of server action kick-player (template.yaml spec.capabilities.actions)"
   },
   "actions.kick-player.params.player.displayName": {
     "defaultMessage": "Nom du joueur",
-    "description": "Label of parameter player of server action kick-player (template.yaml spec.capabilities.actions)",
-    "sourceHash": "8a6f25d4bf5c"
+    "description": "Label of parameter player of server action kick-player (template.yaml spec.capabilities.actions)"
   },
   "actions.save-world.displayName": {
     "defaultMessage": "Sauvegarder le monde",
-    "description": "Label of server action save-world (template.yaml spec.capabilities.actions)",
-    "sourceHash": "1dc0b6da083d"
+    "description": "Label of server action save-world (template.yaml spec.capabilities.actions)"
   },
   "actions.save-world.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action save-world (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action save-world (template.yaml spec.capabilities.actions)"
   },
   "actions.set-motd.displayName": {
     "defaultMessage": "Définir le MOTD",
-    "description": "Label of server action set-motd (template.yaml spec.capabilities.actions)",
-    "sourceHash": "c097acac18a4"
+    "description": "Label of server action set-motd (template.yaml spec.capabilities.actions)"
   },
   "actions.set-motd.group": {
     "defaultMessage": "Serveur",
-    "description": "Group heading of server action set-motd (template.yaml spec.capabilities.actions)",
-    "sourceHash": "aef7de28d529"
+    "description": "Group heading of server action set-motd (template.yaml spec.capabilities.actions)"
   },
   "actions.set-motd.params.message.displayName": {
     "defaultMessage": "Message",
-    "description": "Label of parameter message of server action set-motd (template.yaml spec.capabilities.actions)",
-    "sourceHash": "2f77668a9dfb"
+    "description": "Label of parameter message of server action set-motd (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.displayName": {
     "defaultMessage": "Définir l’heure",
-    "description": "Label of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "12a2143d0543"
+    "description": "Label of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.displayName": {
     "defaultMessage": "Heure de la journée",
-    "description": "Label of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "318fb174f5eb"
+    "description": "Label of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.options.dawn": {
     "defaultMessage": "aube",
-    "description": "Choice \"dawn\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "8326e09ce4e9"
+    "description": "Choice \"dawn\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.options.dusk": {
     "defaultMessage": "crépuscule",
-    "description": "Choice \"dusk\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "29aef83195b2"
+    "description": "Choice \"dusk\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.options.midnight": {
     "defaultMessage": "minuit",
-    "description": "Choice \"midnight\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "35af25f5a5fd"
+    "description": "Choice \"midnight\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.options.noon": {
     "defaultMessage": "midi",
-    "description": "Choice \"noon\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "b198f3cd8e70"
+    "description": "Choice \"noon\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.settle-water.description": {
     "defaultMessage": "Stabilise tous les liquides en mouvement.",
-    "description": "Help text of server action settle-water (template.yaml spec.capabilities.actions)",
-    "sourceHash": "a96ad19136e3"
+    "description": "Help text of server action settle-water (template.yaml spec.capabilities.actions)"
   },
   "actions.settle-water.displayName": {
     "defaultMessage": "Stabiliser l’eau",
-    "description": "Label of server action settle-water (template.yaml spec.capabilities.actions)",
-    "sourceHash": "cb54da134da9"
+    "description": "Label of server action settle-water (template.yaml spec.capabilities.actions)"
   },
   "actions.settle-water.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action settle-water (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action settle-water (template.yaml spec.capabilities.actions)"
   },
   "config.AUTOCREATE.description": {
     "defaultMessage": "Taille du monde à générer si le monde n’existe pas. 1 petit, 2 moyen, 3 grand.",
-    "description": "Help text of configuration field AUTOCREATE (template.yaml spec.configSchema)",
-    "sourceHash": "37f45b569ea9"
+    "description": "Help text of configuration field AUTOCREATE (template.yaml spec.configSchema)"
   },
   "config.AUTOCREATE.displayName": {
     "defaultMessage": "Taille du monde",
-    "description": "Label of configuration field AUTOCREATE (template.yaml spec.configSchema)",
-    "sourceHash": "37fe21bb494a"
+    "description": "Label of configuration field AUTOCREATE (template.yaml spec.configSchema)"
   },
   "config.AUTOCREATE.options.1": {
     "defaultMessage": "1",
-    "description": "Choice \"1\" of configuration field AUTOCREATE (template.yaml spec.configSchema)",
-    "sourceHash": "6b86b273ff34"
+    "description": "Choice \"1\" of configuration field AUTOCREATE (template.yaml spec.configSchema)"
   },
   "config.AUTOCREATE.options.2": {
     "defaultMessage": "2",
-    "description": "Choice \"2\" of configuration field AUTOCREATE (template.yaml spec.configSchema)",
-    "sourceHash": "d4735e3a265e"
+    "description": "Choice \"2\" of configuration field AUTOCREATE (template.yaml spec.configSchema)"
   },
   "config.AUTOCREATE.options.3": {
     "defaultMessage": "3",
-    "description": "Choice \"3\" of configuration field AUTOCREATE (template.yaml spec.configSchema)",
-    "sourceHash": "4e07408562be"
+    "description": "Choice \"3\" of configuration field AUTOCREATE (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.description": {
     "defaultMessage": "0 classique, 1 expert, 2 maître, 3 voyage.",
-    "description": "Help text of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "0a157b644084"
+    "description": "Help text of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.displayName": {
     "defaultMessage": "Difficulté",
-    "description": "Label of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "be44133ed57f"
+    "description": "Label of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.options.0": {
     "defaultMessage": "0",
-    "description": "Choice \"0\" of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "5feceb66ffc8"
+    "description": "Choice \"0\" of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.options.1": {
     "defaultMessage": "1",
-    "description": "Choice \"1\" of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "6b86b273ff34"
+    "description": "Choice \"1\" of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.options.2": {
     "defaultMessage": "2",
-    "description": "Choice \"2\" of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "d4735e3a265e"
+    "description": "Choice \"2\" of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.options.3": {
     "defaultMessage": "3",
-    "description": "Choice \"3\" of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "4e07408562be"
+    "description": "Choice \"3\" of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.displayName": {
     "defaultMessage": "Langue",
-    "description": "Label of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "a4fe65264ef7"
+    "description": "Label of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.de-DE": {
     "defaultMessage": "de-DE",
-    "description": "Choice \"de-DE\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "4f429ced49de"
+    "description": "Choice \"de-DE\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.en-US": {
     "defaultMessage": "en-US",
-    "description": "Choice \"en-US\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "5c49f88dafe6"
+    "description": "Choice \"en-US\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.es-ES": {
     "defaultMessage": "es-ES",
-    "description": "Choice \"es-ES\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "22f76e4a2ad1"
+    "description": "Choice \"es-ES\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.fr-FR": {
     "defaultMessage": "fr-FR",
-    "description": "Choice \"fr-FR\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "f360adab92f1"
+    "description": "Choice \"fr-FR\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.it-IT": {
     "defaultMessage": "it-IT",
-    "description": "Choice \"it-IT\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "be02ed39e12d"
+    "description": "Choice \"it-IT\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.ja-JP": {
     "defaultMessage": "ja-JP",
-    "description": "Choice \"ja-JP\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "415d46e6e579"
+    "description": "Choice \"ja-JP\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.pl-PL": {
     "defaultMessage": "pl-PL",
-    "description": "Choice \"pl-PL\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "c8fa20bd8e5a"
+    "description": "Choice \"pl-PL\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.pt-BR": {
     "defaultMessage": "pt-BR",
-    "description": "Choice \"pt-BR\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "2a67f1a4675a"
+    "description": "Choice \"pt-BR\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.ru-RU": {
     "defaultMessage": "ru-RU",
-    "description": "Choice \"ru-RU\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "d3555b890eb3"
+    "description": "Choice \"ru-RU\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.LANGUAGE.options.zh-Hans": {
     "defaultMessage": "zh-Hans",
-    "description": "Choice \"zh-Hans\" of configuration field LANGUAGE (template.yaml spec.configSchema)",
-    "sourceHash": "730d4d982206"
+    "description": "Choice \"zh-Hans\" of configuration field LANGUAGE (template.yaml spec.configSchema)"
   },
   "config.MAXPLAYERS.displayName": {
     "defaultMessage": "Nombre max. de joueurs",
-    "description": "Label of configuration field MAXPLAYERS (template.yaml spec.configSchema)",
-    "sourceHash": "5a6ba90743a6"
+    "description": "Label of configuration field MAXPLAYERS (template.yaml spec.configSchema)"
   },
   "config.MODPACK.description": {
     "defaultMessage": "Uniquement pour tModLoader : nom d’un dossier de modpack situé dans ModPacks. Laisser vide pour le pack « vanilla » vide intégré.",
-    "description": "Help text of configuration field MODPACK (template.yaml spec.configSchema)",
-    "sourceHash": "221ee8c85ad7"
+    "description": "Help text of configuration field MODPACK (template.yaml spec.configSchema)"
   },
   "config.MODPACK.displayName": {
     "defaultMessage": "Modpack actif",
-    "description": "Label of configuration field MODPACK (template.yaml spec.configSchema)",
-    "sourceHash": "52aacc974311"
+    "description": "Label of configuration field MODPACK (template.yaml spec.configSchema)"
   },
   "config.MOTD.displayName": {
     "defaultMessage": "MOTD",
-    "description": "Label of configuration field MOTD (template.yaml spec.configSchema)",
-    "sourceHash": "58145f3b3159"
+    "description": "Label of configuration field MOTD (template.yaml spec.configSchema)"
   },
   "config.PASSWORD.description": {
     "defaultMessage": "Laisser vide pour un serveur ouvert.",
-    "description": "Help text of configuration field PASSWORD (template.yaml spec.configSchema)",
-    "sourceHash": "21ccb2a27508"
+    "description": "Help text of configuration field PASSWORD (template.yaml spec.configSchema)"
   },
   "config.PASSWORD.displayName": {
     "defaultMessage": "Mot de passe du serveur",
-    "description": "Label of configuration field PASSWORD (template.yaml spec.configSchema)",
-    "sourceHash": "146e204412ad"
+    "description": "Label of configuration field PASSWORD (template.yaml spec.configSchema)"
   },
   "config.SECURE.displayName": {
     "defaultMessage": "Protection anti-triche",
-    "description": "Label of configuration field SECURE (template.yaml spec.configSchema)",
-    "sourceHash": "871867b9c28b"
+    "description": "Label of configuration field SECURE (template.yaml spec.configSchema)"
   },
   "config.SECURE.options.0": {
     "defaultMessage": "0",
-    "description": "Choice \"0\" of configuration field SECURE (template.yaml spec.configSchema)",
-    "sourceHash": "5feceb66ffc8"
+    "description": "Choice \"0\" of configuration field SECURE (template.yaml spec.configSchema)"
   },
   "config.SECURE.options.1": {
     "defaultMessage": "1",
-    "description": "Choice \"1\" of configuration field SECURE (template.yaml spec.configSchema)",
-    "sourceHash": "6b86b273ff34"
+    "description": "Choice \"1\" of configuration field SECURE (template.yaml spec.configSchema)"
   },
   "config.SEED.description": {
     "defaultMessage": "Utilisée lors de la génération d’un nouveau monde. Laisser vide pour une valeur aléatoire.",
-    "description": "Help text of configuration field SEED (template.yaml spec.configSchema)",
-    "sourceHash": "5f4140494612"
+    "description": "Help text of configuration field SEED (template.yaml spec.configSchema)"
   },
   "config.SEED.displayName": {
     "defaultMessage": "Graine du monde",
-    "description": "Label of configuration field SEED (template.yaml spec.configSchema)",
-    "sourceHash": "2af8986090a5"
+    "description": "Label of configuration field SEED (template.yaml spec.configSchema)"
   },
   "config.WORLDNAME.displayName": {
     "defaultMessage": "Nom du monde",
-    "description": "Label of configuration field WORLDNAME (template.yaml spec.configSchema)",
-    "sourceHash": "bf050f5e51eb"
+    "description": "Label of configuration field WORLDNAME (template.yaml spec.configSchema)"
   },
   "mods.tmodloader.displayName": {
     "defaultMessage": "Modpacks tModLoader",
-    "description": "Label of the mod volume tmodloader in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "95ca84024b0d"
+    "description": "Label of the mod volume tmodloader in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "module.displayName": {
     "defaultMessage": "Terraria",
-    "description": "Display name of the module (module.yaml displayName)",
-    "sourceHash": "5b77f1f6eacf"
+    "description": "Display name of the module (module.yaml displayName)"
   },
   "module.summary": {
     "defaultMessage": "Serveur dédié Terraria + tModLoader (passivelemon/terraria-docker) avec un sélecteur vanilla / tModLoader et un volume de modpacks tModLoader. Console via l’entrée standard du conteneur.",
-    "description": "One-line summary of the module (module.yaml summary)",
-    "sourceHash": "4846aa8b2bf7"
+    "description": "One-line summary of the module (module.yaml summary)"
   },
   "template.description": {
     "defaultMessage": "Serveur dédié Terraria + tModLoader utilisant\n[passivelemon/terraria-docker](https://github.com/PassiveLemon/terraria-docker).\nChoisissez vanilla ou tModLoader (et la build) dans l’assistant : le choix correspond à un tag d’image. Les modpacks tModLoader se gèrent depuis l’onglet Mods.\nLa console est rattachée à l’entrée standard du conteneur (pty) ; pas de RCON.\n",
-    "description": "Description of the game template (template.yaml spec.description)",
-    "sourceHash": "1648b94cd262"
+    "description": "Description of the game template (template.yaml spec.description)"
   },
   "template.displayName": {
     "defaultMessage": "Terraria",
-    "description": "Display name of the game template (template.yaml spec.displayName)",
-    "sourceHash": "5b77f1f6eacf"
+    "description": "Display name of the game template (template.yaml spec.displayName)"
   },
   "versions.tmodloader-2026.displayName": {
     "defaultMessage": "tModLoader · 2026 stable",
-    "description": "Label of game version tmodloader-2026 in the version picker (template.yaml spec.versions)",
-    "sourceHash": "782ce054972a"
+    "description": "Label of game version tmodloader-2026 in the version picker (template.yaml spec.versions)"
   },
   "versions.tmodloader-latest.displayName": {
     "defaultMessage": "tModLoader · dernière version",
-    "description": "Label of game version tmodloader-latest in the version picker (template.yaml spec.versions)",
-    "sourceHash": "c1abfc98bb9d"
+    "description": "Label of game version tmodloader-latest in the version picker (template.yaml spec.versions)"
   },
   "versions.tmodloader-preview.displayName": {
     "defaultMessage": "tModLoader · dernière préversion",
-    "description": "Label of game version tmodloader-preview in the version picker (template.yaml spec.versions)",
-    "sourceHash": "f5f1b46980d5"
+    "description": "Label of game version tmodloader-preview in the version picker (template.yaml spec.versions)"
   },
   "versions.vanilla-latest.displayName": {
     "defaultMessage": "Vanilla · dernière version",
-    "description": "Label of game version vanilla-latest in the version picker (template.yaml spec.versions)",
-    "sourceHash": "3605403aa07e"
+    "description": "Label of game version vanilla-latest in the version picker (template.yaml spec.versions)"
   }
 }
