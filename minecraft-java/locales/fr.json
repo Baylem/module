@@ -1,617 +1,494 @@
 {
   "actions.announce-restart.description": {
     "defaultMessage": "Prévient les joueurs, sauvegarde le monde, puis arrête le serveur.",
-    "description": "Help text of server action announce-restart (template.yaml spec.capabilities.actions)",
-    "sourceHash": "0d3c3c87222f"
+    "description": "Help text of server action announce-restart (template.yaml spec.capabilities.actions)"
   },
   "actions.announce-restart.displayName": {
     "defaultMessage": "Annoncer le redémarrage",
-    "description": "Label of server action announce-restart (template.yaml spec.capabilities.actions)",
-    "sourceHash": "87828779e32e"
+    "description": "Label of server action announce-restart (template.yaml spec.capabilities.actions)"
   },
   "actions.announce-restart.group": {
     "defaultMessage": "Serveur",
-    "description": "Group heading of server action announce-restart (template.yaml spec.capabilities.actions)",
-    "sourceHash": "aef7de28d529"
+    "description": "Group heading of server action announce-restart (template.yaml spec.capabilities.actions)"
   },
   "actions.announce-restart.params.message.displayName": {
     "defaultMessage": "Message",
-    "description": "Label of parameter message of server action announce-restart (template.yaml spec.capabilities.actions)",
-    "sourceHash": "2f77668a9dfb"
+    "description": "Label of parameter message of server action announce-restart (template.yaml spec.capabilities.actions)"
   },
   "actions.broadcast.description": {
     "defaultMessage": "Envoie un message de chat à tous les joueurs du serveur.",
-    "description": "Help text of server action broadcast (template.yaml spec.capabilities.actions)",
-    "sourceHash": "7e51315eb1e6"
+    "description": "Help text of server action broadcast (template.yaml spec.capabilities.actions)"
   },
   "actions.broadcast.displayName": {
     "defaultMessage": "Diffuser un message",
-    "description": "Label of server action broadcast (template.yaml spec.capabilities.actions)",
-    "sourceHash": "059e3fa3f652"
+    "description": "Label of server action broadcast (template.yaml spec.capabilities.actions)"
   },
   "actions.broadcast.group": {
     "defaultMessage": "Serveur",
-    "description": "Group heading of server action broadcast (template.yaml spec.capabilities.actions)",
-    "sourceHash": "aef7de28d529"
+    "description": "Group heading of server action broadcast (template.yaml spec.capabilities.actions)"
   },
   "actions.broadcast.params.message.displayName": {
     "defaultMessage": "Message",
-    "description": "Label of parameter message of server action broadcast (template.yaml spec.capabilities.actions)",
-    "sourceHash": "2f77668a9dfb"
+    "description": "Label of parameter message of server action broadcast (template.yaml spec.capabilities.actions)"
   },
   "actions.give-item.description": {
     "defaultMessage": "Donne un objet à un joueur.",
-    "description": "Help text of server action give-item (template.yaml spec.capabilities.actions)",
-    "sourceHash": "bdea94882192"
+    "description": "Help text of server action give-item (template.yaml spec.capabilities.actions)"
   },
   "actions.give-item.displayName": {
     "defaultMessage": "Donner un objet",
-    "description": "Label of server action give-item (template.yaml spec.capabilities.actions)",
-    "sourceHash": "ef9e6dd246cc"
+    "description": "Label of server action give-item (template.yaml spec.capabilities.actions)"
   },
   "actions.give-item.group": {
     "defaultMessage": "Joueurs",
-    "description": "Group heading of server action give-item (template.yaml spec.capabilities.actions)",
-    "sourceHash": "84e12ac655dd"
+    "description": "Group heading of server action give-item (template.yaml spec.capabilities.actions)"
   },
   "actions.give-item.params.count.displayName": {
     "defaultMessage": "Quantité",
-    "description": "Label of parameter count of server action give-item (template.yaml spec.capabilities.actions)",
-    "sourceHash": "822bab8d41bc"
+    "description": "Label of parameter count of server action give-item (template.yaml spec.capabilities.actions)"
   },
   "actions.give-item.params.item.displayName": {
     "defaultMessage": "ID de l’objet (ex. diamond, golden_apple)",
-    "description": "Label of parameter item of server action give-item (template.yaml spec.capabilities.actions)",
-    "sourceHash": "679d9446d6a6"
+    "description": "Label of parameter item of server action give-item (template.yaml spec.capabilities.actions)"
   },
   "actions.give-item.params.player.displayName": {
     "defaultMessage": "Nom du joueur",
-    "description": "Label of parameter player of server action give-item (template.yaml spec.capabilities.actions)",
-    "sourceHash": "8a6f25d4bf5c"
+    "description": "Label of parameter player of server action give-item (template.yaml spec.capabilities.actions)"
   },
   "actions.save-world.description": {
     "defaultMessage": "Écrit immédiatement le monde sur le disque.",
-    "description": "Help text of server action save-world (template.yaml spec.capabilities.actions)",
-    "sourceHash": "2776d8631ef6"
+    "description": "Help text of server action save-world (template.yaml spec.capabilities.actions)"
   },
   "actions.save-world.displayName": {
     "defaultMessage": "Sauvegarder le monde",
-    "description": "Label of server action save-world (template.yaml spec.capabilities.actions)",
-    "sourceHash": "1dc0b6da083d"
+    "description": "Label of server action save-world (template.yaml spec.capabilities.actions)"
   },
   "actions.save-world.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action save-world (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action save-world (template.yaml spec.capabilities.actions)"
   },
   "actions.set-difficulty.displayName": {
     "defaultMessage": "Définir la difficulté",
-    "description": "Label of server action set-difficulty (template.yaml spec.capabilities.actions)",
-    "sourceHash": "6377cc817ef6"
+    "description": "Label of server action set-difficulty (template.yaml spec.capabilities.actions)"
   },
   "actions.set-difficulty.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action set-difficulty (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action set-difficulty (template.yaml spec.capabilities.actions)"
   },
   "actions.set-difficulty.params.level.displayName": {
     "defaultMessage": "Difficulté",
-    "description": "Label of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)",
-    "sourceHash": "be44133ed57f"
+    "description": "Label of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)"
   },
   "actions.set-difficulty.params.level.options.easy": {
     "defaultMessage": "facile",
-    "description": "Choice \"easy\" of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)",
-    "sourceHash": "97c10efe01d5"
+    "description": "Choice \"easy\" of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)"
   },
   "actions.set-difficulty.params.level.options.hard": {
     "defaultMessage": "difficile",
-    "description": "Choice \"hard\" of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)",
-    "sourceHash": "ed5465b9220d"
+    "description": "Choice \"hard\" of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)"
   },
   "actions.set-difficulty.params.level.options.normal": {
     "defaultMessage": "normal",
-    "description": "Choice \"normal\" of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)",
-    "sourceHash": "317b32c14369"
+    "description": "Choice \"normal\" of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)"
   },
   "actions.set-difficulty.params.level.options.peaceful": {
     "defaultMessage": "paisible",
-    "description": "Choice \"peaceful\" of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)",
-    "sourceHash": "2a4baa647f52"
+    "description": "Choice \"peaceful\" of parameter level of server action set-difficulty (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.description": {
     "defaultMessage": "Change le mode de jeu d’un joueur.",
-    "description": "Help text of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "316b262f4a1e"
+    "description": "Help text of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.displayName": {
     "defaultMessage": "Définir le mode de jeu du joueur",
-    "description": "Label of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "6e7dbb3ecdd8"
+    "description": "Label of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.group": {
     "defaultMessage": "Joueurs",
-    "description": "Group heading of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "84e12ac655dd"
+    "description": "Group heading of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.params.mode.displayName": {
     "defaultMessage": "Mode de jeu",
-    "description": "Label of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "ede76ceab6f1"
+    "description": "Label of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.params.mode.options.adventure": {
     "defaultMessage": "aventure",
-    "description": "Choice \"adventure\" of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "47360b8c5f58"
+    "description": "Choice \"adventure\" of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.params.mode.options.creative": {
     "defaultMessage": "créatif",
-    "description": "Choice \"creative\" of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "828febb7609a"
+    "description": "Choice \"creative\" of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.params.mode.options.spectator": {
     "defaultMessage": "spectateur",
-    "description": "Choice \"spectator\" of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "929f9a342442"
+    "description": "Choice \"spectator\" of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.params.mode.options.survival": {
     "defaultMessage": "survie",
-    "description": "Choice \"survival\" of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "4032ee403877"
+    "description": "Choice \"survival\" of parameter mode of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-gamemode.params.player.displayName": {
     "defaultMessage": "Nom du joueur",
-    "description": "Label of parameter player of server action set-gamemode (template.yaml spec.capabilities.actions)",
-    "sourceHash": "8a6f25d4bf5c"
+    "description": "Label of parameter player of server action set-gamemode (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.displayName": {
     "defaultMessage": "Définir l’heure",
-    "description": "Label of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "12a2143d0543"
+    "description": "Label of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.displayName": {
     "defaultMessage": "Heure de la journée",
-    "description": "Label of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "318fb174f5eb"
+    "description": "Label of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.options.day": {
     "defaultMessage": "jour",
-    "description": "Choice \"day\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "944c27e5b97a"
+    "description": "Choice \"day\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.options.midnight": {
     "defaultMessage": "minuit",
-    "description": "Choice \"midnight\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "35af25f5a5fd"
+    "description": "Choice \"midnight\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.options.night": {
     "defaultMessage": "nuit",
-    "description": "Choice \"night\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "176473d73133"
+    "description": "Choice \"night\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-time.params.time.options.noon": {
     "defaultMessage": "midi",
-    "description": "Choice \"noon\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)",
-    "sourceHash": "b198f3cd8e70"
+    "description": "Choice \"noon\" of parameter time of server action set-time (template.yaml spec.capabilities.actions)"
   },
   "actions.set-weather.displayName": {
     "defaultMessage": "Définir la météo",
-    "description": "Label of server action set-weather (template.yaml spec.capabilities.actions)",
-    "sourceHash": "a48d8ca65b16"
+    "description": "Label of server action set-weather (template.yaml spec.capabilities.actions)"
   },
   "actions.set-weather.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action set-weather (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action set-weather (template.yaml spec.capabilities.actions)"
   },
   "actions.set-weather.params.weather.displayName": {
     "defaultMessage": "Météo",
-    "description": "Label of parameter weather of server action set-weather (template.yaml spec.capabilities.actions)",
-    "sourceHash": "a0bba6381246"
+    "description": "Label of parameter weather of server action set-weather (template.yaml spec.capabilities.actions)"
   },
   "actions.set-weather.params.weather.options.clear": {
     "defaultMessage": "dégagé",
-    "description": "Choice \"clear\" of parameter weather of server action set-weather (template.yaml spec.capabilities.actions)",
-    "sourceHash": "913a4cb91be2"
+    "description": "Choice \"clear\" of parameter weather of server action set-weather (template.yaml spec.capabilities.actions)"
   },
   "actions.set-weather.params.weather.options.rain": {
     "defaultMessage": "pluie",
-    "description": "Choice \"rain\" of parameter weather of server action set-weather (template.yaml spec.capabilities.actions)",
-    "sourceHash": "319b44c570a4"
+    "description": "Choice \"rain\" of parameter weather of server action set-weather (template.yaml spec.capabilities.actions)"
   },
   "actions.set-weather.params.weather.options.thunder": {
     "defaultMessage": "orage",
-    "description": "Choice \"thunder\" of parameter weather of server action set-weather (template.yaml spec.capabilities.actions)",
-    "sourceHash": "49eff747f7b6"
+    "description": "Choice \"thunder\" of parameter weather of server action set-weather (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-daylight-cycle.description": {
     "defaultMessage": "Fige ou reprend le cycle jour/nuit.",
-    "description": "Help text of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)",
-    "sourceHash": "07c218ba01d5"
+    "description": "Help text of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-daylight-cycle.displayName": {
     "defaultMessage": "Activer/désactiver le cycle jour/nuit",
-    "description": "Label of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)",
-    "sourceHash": "69c0a57b2661"
+    "description": "Label of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-daylight-cycle.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-daylight-cycle.params.value.displayName": {
     "defaultMessage": "Cycle jour/nuit",
-    "description": "Label of parameter value of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)",
-    "sourceHash": "7078fa29d530"
+    "description": "Label of parameter value of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-daylight-cycle.params.value.options.false": {
     "defaultMessage": "faux",
-    "description": "Choice \"false\" of parameter value of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)",
-    "sourceHash": "fcbcf165908d"
+    "description": "Choice \"false\" of parameter value of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-daylight-cycle.params.value.options.true": {
     "defaultMessage": "vrai",
-    "description": "Choice \"true\" of parameter value of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)",
-    "sourceHash": "b5bea41b6c62"
+    "description": "Choice \"true\" of parameter value of server action toggle-daylight-cycle (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-keep-inventory.description": {
     "defaultMessage": "Indique si les joueurs gardent leurs objets à la mort.",
-    "description": "Help text of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)",
-    "sourceHash": "583ea21cbec0"
+    "description": "Help text of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-keep-inventory.displayName": {
     "defaultMessage": "Activer/désactiver la conservation de l’inventaire",
-    "description": "Label of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)",
-    "sourceHash": "c4d82130b3ca"
+    "description": "Label of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-keep-inventory.group": {
     "defaultMessage": "Monde",
-    "description": "Group heading of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)",
-    "sourceHash": "78ae647dc554"
+    "description": "Group heading of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-keep-inventory.params.value.displayName": {
     "defaultMessage": "Conserver l’inventaire",
-    "description": "Label of parameter value of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)",
-    "sourceHash": "0a2dd993ec8d"
+    "description": "Label of parameter value of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-keep-inventory.params.value.options.false": {
     "defaultMessage": "faux",
-    "description": "Choice \"false\" of parameter value of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)",
-    "sourceHash": "fcbcf165908d"
+    "description": "Choice \"false\" of parameter value of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)"
   },
   "actions.toggle-keep-inventory.params.value.options.true": {
     "defaultMessage": "vrai",
-    "description": "Choice \"true\" of parameter value of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)",
-    "sourceHash": "b5bea41b6c62"
+    "description": "Choice \"true\" of parameter value of server action toggle-keep-inventory (template.yaml spec.capabilities.actions)"
   },
   "config.DIFFICULTY.displayName": {
     "defaultMessage": "Difficulté",
-    "description": "Label of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "be44133ed57f"
+    "description": "Label of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.options.easy": {
     "defaultMessage": "facile",
-    "description": "Choice \"easy\" of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "97c10efe01d5"
+    "description": "Choice \"easy\" of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.options.hard": {
     "defaultMessage": "difficile",
-    "description": "Choice \"hard\" of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "ed5465b9220d"
+    "description": "Choice \"hard\" of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.options.normal": {
     "defaultMessage": "normal",
-    "description": "Choice \"normal\" of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "317b32c14369"
+    "description": "Choice \"normal\" of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.DIFFICULTY.options.peaceful": {
     "defaultMessage": "paisible",
-    "description": "Choice \"peaceful\" of configuration field DIFFICULTY (template.yaml spec.configSchema)",
-    "sourceHash": "2a4baa647f52"
+    "description": "Choice \"peaceful\" of configuration field DIFFICULTY (template.yaml spec.configSchema)"
   },
   "config.HARDCORE.displayName": {
     "defaultMessage": "Mode hardcore",
-    "description": "Label of configuration field HARDCORE (template.yaml spec.configSchema)",
-    "sourceHash": "38956488bd78"
+    "description": "Label of configuration field HARDCORE (template.yaml spec.configSchema)"
   },
   "config.INIT_MEMORY.description": {
     "defaultMessage": "Taille initiale du tas (-Xms), au maximum égale au maximum de la JVM. Laisser vide pour correspondre au tas maximum automatique (un tas fixe évite les redimensionnements du GC).",
-    "description": "Help text of configuration field INIT_MEMORY (template.yaml spec.configSchema)",
-    "sourceHash": "b4a5e6eacd0a"
+    "description": "Help text of configuration field INIT_MEMORY (template.yaml spec.configSchema)"
   },
   "config.INIT_MEMORY.displayName": {
     "defaultMessage": "Tas initial de la JVM",
-    "description": "Label of configuration field INIT_MEMORY (template.yaml spec.configSchema)",
-    "sourceHash": "cfd0b63a804d"
+    "description": "Label of configuration field INIT_MEMORY (template.yaml spec.configSchema)"
   },
   "config.LEVEL_SEED.description": {
     "defaultMessage": "Laisser vide pour une graine aléatoire.",
-    "description": "Help text of configuration field LEVEL_SEED (template.yaml spec.configSchema)",
-    "sourceHash": "cb50f3d0826b"
+    "description": "Help text of configuration field LEVEL_SEED (template.yaml spec.configSchema)"
   },
   "config.LEVEL_SEED.displayName": {
     "defaultMessage": "Graine du monde",
-    "description": "Label of configuration field LEVEL_SEED (template.yaml spec.configSchema)",
-    "sourceHash": "2af8986090a5"
+    "description": "Label of configuration field LEVEL_SEED (template.yaml spec.configSchema)"
   },
   "config.MAX_MEMORY.description": {
     "defaultMessage": "Plafond du tas Java (-Xmx, ex. 2G, 3072M). Laisser vide pour le dimensionner automatiquement à 75 % de la limite de mémoire du conteneur : il suit alors la limite à chaque redimensionnement du serveur. Si vous le définissez vous-même, gardez environ 25 % de marge sous la limite : la JVM a besoin de place pour la mémoire hors tas, et dépasser la limite entraîne l’arrêt du serveur par OOM-kill.",
-    "description": "Help text of configuration field MAX_MEMORY (template.yaml spec.configSchema)",
-    "sourceHash": "f1fbbbcce1d6"
+    "description": "Help text of configuration field MAX_MEMORY (template.yaml spec.configSchema)"
   },
   "config.MAX_MEMORY.displayName": {
     "defaultMessage": "Tas maximum de la JVM",
-    "description": "Label of configuration field MAX_MEMORY (template.yaml spec.configSchema)",
-    "sourceHash": "5a53a9f3d0ad"
+    "description": "Label of configuration field MAX_MEMORY (template.yaml spec.configSchema)"
   },
   "config.MAX_PLAYERS.displayName": {
     "defaultMessage": "Nombre max. de joueurs",
-    "description": "Label of configuration field MAX_PLAYERS (template.yaml spec.configSchema)",
-    "sourceHash": "5a6ba90743a6"
+    "description": "Label of configuration field MAX_PLAYERS (template.yaml spec.configSchema)"
   },
   "config.MODE.displayName": {
     "defaultMessage": "Mode de jeu",
-    "description": "Label of configuration field MODE (template.yaml spec.configSchema)",
-    "sourceHash": "ede76ceab6f1"
+    "description": "Label of configuration field MODE (template.yaml spec.configSchema)"
   },
   "config.MODE.options.adventure": {
     "defaultMessage": "aventure",
-    "description": "Choice \"adventure\" of configuration field MODE (template.yaml spec.configSchema)",
-    "sourceHash": "47360b8c5f58"
+    "description": "Choice \"adventure\" of configuration field MODE (template.yaml spec.configSchema)"
   },
   "config.MODE.options.creative": {
     "defaultMessage": "créatif",
-    "description": "Choice \"creative\" of configuration field MODE (template.yaml spec.configSchema)",
-    "sourceHash": "828febb7609a"
+    "description": "Choice \"creative\" of configuration field MODE (template.yaml spec.configSchema)"
   },
   "config.MODE.options.spectator": {
     "defaultMessage": "spectateur",
-    "description": "Choice \"spectator\" of configuration field MODE (template.yaml spec.configSchema)",
-    "sourceHash": "929f9a342442"
+    "description": "Choice \"spectator\" of configuration field MODE (template.yaml spec.configSchema)"
   },
   "config.MODE.options.survival": {
     "defaultMessage": "survie",
-    "description": "Choice \"survival\" of configuration field MODE (template.yaml spec.configSchema)",
-    "sourceHash": "4032ee403877"
+    "description": "Choice \"survival\" of configuration field MODE (template.yaml spec.configSchema)"
   },
   "config.MOTD.description": {
     "defaultMessage": "Description du serveur affichée dans la liste multijoueur.",
-    "description": "Help text of configuration field MOTD (template.yaml spec.configSchema)",
-    "sourceHash": "d1e42097b13f"
+    "description": "Help text of configuration field MOTD (template.yaml spec.configSchema)"
   },
   "config.MOTD.displayName": {
     "defaultMessage": "MOTD",
-    "description": "Label of configuration field MOTD (template.yaml spec.configSchema)",
-    "sourceHash": "58145f3b3159"
+    "description": "Label of configuration field MOTD (template.yaml spec.configSchema)"
   },
   "config.ONLINE_MODE.description": {
     "defaultMessage": "Vérifie les joueurs auprès de Mojang. À désactiver uniquement pour les configurations hors ligne ou LAN.",
-    "description": "Help text of configuration field ONLINE_MODE (template.yaml spec.configSchema)",
-    "sourceHash": "e0d4a3c8f231"
+    "description": "Help text of configuration field ONLINE_MODE (template.yaml spec.configSchema)"
   },
   "config.ONLINE_MODE.displayName": {
     "defaultMessage": "Mode en ligne",
-    "description": "Label of configuration field ONLINE_MODE (template.yaml spec.configSchema)",
-    "sourceHash": "6443cff7f789"
+    "description": "Label of configuration field ONLINE_MODE (template.yaml spec.configSchema)"
   },
   "config.PVP.displayName": {
     "defaultMessage": "PvP activé",
-    "description": "Label of configuration field PVP (template.yaml spec.configSchema)",
-    "sourceHash": "82f91ef7cf31"
+    "description": "Label of configuration field PVP (template.yaml spec.configSchema)"
   },
   "config.VIEW_DISTANCE.displayName": {
     "defaultMessage": "Distance d’affichage (chunks)",
-    "description": "Label of configuration field VIEW_DISTANCE (template.yaml spec.configSchema)",
-    "sourceHash": "e308828f4f7c"
+    "description": "Label of configuration field VIEW_DISTANCE (template.yaml spec.configSchema)"
   },
   "config.WHITELIST_ENABLED.displayName": {
     "defaultMessage": "Appliquer la liste blanche",
-    "description": "Label of configuration field WHITELIST_ENABLED (template.yaml spec.configSchema)",
-    "sourceHash": "adda297584e7"
+    "description": "Label of configuration field WHITELIST_ENABLED (template.yaml spec.configSchema)"
   },
   "metrics.difficulty.displayName": {
     "defaultMessage": "Difficulté",
-    "description": "Label of status metric difficulty (template.yaml spec.capabilities.status.metrics)",
-    "sourceHash": "be44133ed57f"
+    "description": "Label of status metric difficulty (template.yaml spec.capabilities.status.metrics)"
   },
   "metrics.seed.displayName": {
     "defaultMessage": "Graine du monde",
-    "description": "Label of status metric seed (template.yaml spec.capabilities.status.metrics)",
-    "sourceHash": "2af8986090a5"
+    "description": "Label of status metric seed (template.yaml spec.capabilities.status.metrics)"
   },
   "mods.bukkit.displayName": {
     "defaultMessage": "Plugins (Bukkit)",
-    "description": "Label of the mod volume bukkit in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "53ebb82fc24b"
+    "description": "Label of the mod volume bukkit in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "mods.fabric.displayName": {
     "defaultMessage": "Mods (Fabric)",
-    "description": "Label of the mod volume fabric in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "e31aee165070"
+    "description": "Label of the mod volume fabric in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "mods.forge.displayName": {
     "defaultMessage": "Mods (Forge)",
-    "description": "Label of the mod volume forge in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "c51c563be8dd"
+    "description": "Label of the mod volume forge in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "mods.neoforge.displayName": {
     "defaultMessage": "Mods (NeoForge)",
-    "description": "Label of the mod volume neoforge in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "37529a8fa332"
+    "description": "Label of the mod volume neoforge in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "mods.paper.displayName": {
     "defaultMessage": "Plugins (Paper)",
-    "description": "Label of the mod volume paper in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "35c84bd45829"
+    "description": "Label of the mod volume paper in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "mods.purpur.displayName": {
     "defaultMessage": "Plugins (Purpur)",
-    "description": "Label of the mod volume purpur in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "77b0bf1e5b0e"
+    "description": "Label of the mod volume purpur in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "mods.quilt.displayName": {
     "defaultMessage": "Mods (Quilt)",
-    "description": "Label of the mod volume quilt in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "b9af36268901"
+    "description": "Label of the mod volume quilt in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "mods.spigot.displayName": {
     "defaultMessage": "Plugins (Spigot)",
-    "description": "Label of the mod volume spigot in the Mods tab (template.yaml spec.capabilities.mods.loaders)",
-    "sourceHash": "d1b98c6328d1"
+    "description": "Label of the mod volume spigot in the Mods tab (template.yaml spec.capabilities.mods.loaders)"
   },
   "module.displayName": {
     "defaultMessage": "Minecraft (Java Edition)",
-    "description": "Display name of the module (module.yaml displayName)",
-    "sourceHash": "98d613a03d7b"
+    "description": "Display name of the module (module.yaml displayName)"
   },
   "module.summary": {
     "defaultMessage": "Serveurs Vanilla / Paper / Spigot / Bukkit / Purpur / Forge / NeoForge / Fabric / Quilt (itzg/minecraft-server) avec un sélecteur version + loader allant de 1.16.5 à la dernière version, des volumes de mods distincts par loader et la recherche Modrinth intégrée à l’application.",
-    "description": "One-line summary of the module (module.yaml summary)",
-    "sourceHash": "77dc338111c2"
+    "description": "One-line summary of the module (module.yaml summary)"
   },
   "template.description": {
     "defaultMessage": "Vanilla, Paper, Spigot, Bukkit, Purpur, Forge, NeoForge, Fabric ou Quilt\nServeurs Minecraft Java Edition utilisant l’image\n[itzg/minecraft-server](https://github.com/itzg/docker-minecraft-server)\ncommunautaire. Choisissez une version+loader dans l’assistant Nouveau serveur ; les mods/plugins de chaque loader vivent sur leur propre volume, si bien que changer de loader n’écrase jamais les autres.\n",
-    "description": "Description of the game template (template.yaml spec.description)",
-    "sourceHash": "04177b3c0f71"
+    "description": "Description of the game template (template.yaml spec.description)"
   },
   "template.displayName": {
     "defaultMessage": "Minecraft (Java Edition)",
-    "description": "Display name of the game template (template.yaml spec.displayName)",
-    "sourceHash": "98d613a03d7b"
+    "description": "Display name of the game template (template.yaml spec.displayName)"
   },
   "versions.1~116~15-forge.displayName": {
     "defaultMessage": "1.16.5 · Forge",
-    "description": "Label of game version 1.16.5-forge in the version picker (template.yaml spec.versions)",
-    "sourceHash": "3cedd3d01ab6"
+    "description": "Label of game version 1.16.5-forge in the version picker (template.yaml spec.versions)"
   },
   "versions.1~116~15-paper.displayName": {
     "defaultMessage": "1.16.5 · Paper",
-    "description": "Label of game version 1.16.5-paper in the version picker (template.yaml spec.versions)",
-    "sourceHash": "a7e6596f35e2"
+    "description": "Label of game version 1.16.5-paper in the version picker (template.yaml spec.versions)"
   },
   "versions.1~118~12-forge.displayName": {
     "defaultMessage": "1.18.2 · Forge",
-    "description": "Label of game version 1.18.2-forge in the version picker (template.yaml spec.versions)",
-    "sourceHash": "1bdbce40954b"
+    "description": "Label of game version 1.18.2-forge in the version picker (template.yaml spec.versions)"
   },
   "versions.1~118~12-paper.displayName": {
     "defaultMessage": "1.18.2 · Paper",
-    "description": "Label of game version 1.18.2-paper in the version picker (template.yaml spec.versions)",
-    "sourceHash": "ff8769953ce1"
+    "description": "Label of game version 1.18.2-paper in the version picker (template.yaml spec.versions)"
   },
   "versions.1~119~14-forge.displayName": {
     "defaultMessage": "1.19.4 · Forge",
-    "description": "Label of game version 1.19.4-forge in the version picker (template.yaml spec.versions)",
-    "sourceHash": "ce8fa2913552"
+    "description": "Label of game version 1.19.4-forge in the version picker (template.yaml spec.versions)"
   },
   "versions.1~119~14-paper.displayName": {
     "defaultMessage": "1.19.4 · Paper",
-    "description": "Label of game version 1.19.4-paper in the version picker (template.yaml spec.versions)",
-    "sourceHash": "f150d0668574"
+    "description": "Label of game version 1.19.4-paper in the version picker (template.yaml spec.versions)"
   },
   "versions.1~120~11-fabric.displayName": {
     "defaultMessage": "1.20.1 · Fabric",
-    "description": "Label of game version 1.20.1-fabric in the version picker (template.yaml spec.versions)",
-    "sourceHash": "d860a9d53b99"
+    "description": "Label of game version 1.20.1-fabric in the version picker (template.yaml spec.versions)"
   },
   "versions.1~120~11-forge.displayName": {
     "defaultMessage": "1.20.1 · Forge",
-    "description": "Label of game version 1.20.1-forge in the version picker (template.yaml spec.versions)",
-    "sourceHash": "3028c85cdbf5"
+    "description": "Label of game version 1.20.1-forge in the version picker (template.yaml spec.versions)"
   },
   "versions.1~120~11-paper.displayName": {
     "defaultMessage": "1.20.1 · Paper",
-    "description": "Label of game version 1.20.1-paper in the version picker (template.yaml spec.versions)",
-    "sourceHash": "81bc235b8878"
+    "description": "Label of game version 1.20.1-paper in the version picker (template.yaml spec.versions)"
   },
   "versions.1~120~14-fabric.displayName": {
     "defaultMessage": "1.20.4 · Fabric",
-    "description": "Label of game version 1.20.4-fabric in the version picker (template.yaml spec.versions)",
-    "sourceHash": "76adff56314e"
+    "description": "Label of game version 1.20.4-fabric in the version picker (template.yaml spec.versions)"
   },
   "versions.1~120~14-forge.displayName": {
     "defaultMessage": "1.20.4 · Forge",
-    "description": "Label of game version 1.20.4-forge in the version picker (template.yaml spec.versions)",
-    "sourceHash": "ab0e735fffee"
+    "description": "Label of game version 1.20.4-forge in the version picker (template.yaml spec.versions)"
   },
   "versions.1~120~14-paper.displayName": {
     "defaultMessage": "1.20.4 · Paper",
-    "description": "Label of game version 1.20.4-paper in the version picker (template.yaml spec.versions)",
-    "sourceHash": "af66a9cadb12"
+    "description": "Label of game version 1.20.4-paper in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~11-fabric.displayName": {
     "defaultMessage": "1.21.1 · Fabric",
-    "description": "Label of game version 1.21.1-fabric in the version picker (template.yaml spec.versions)",
-    "sourceHash": "b37474386c0b"
+    "description": "Label of game version 1.21.1-fabric in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~11-neoforge.displayName": {
     "defaultMessage": "1.21.1 · NeoForge",
-    "description": "Label of game version 1.21.1-neoforge in the version picker (template.yaml spec.versions)",
-    "sourceHash": "b82f4d8689de"
+    "description": "Label of game version 1.21.1-neoforge in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~11-paper.displayName": {
     "defaultMessage": "1.21.1 · Paper",
-    "description": "Label of game version 1.21.1-paper in the version picker (template.yaml spec.versions)",
-    "sourceHash": "e11ad7383107"
+    "description": "Label of game version 1.21.1-paper in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~11-vanilla.displayName": {
     "defaultMessage": "1.21.1 · Vanilla",
-    "description": "Label of game version 1.21.1-vanilla in the version picker (template.yaml spec.versions)",
-    "sourceHash": "75326360e06a"
+    "description": "Label of game version 1.21.1-vanilla in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~14-fabric.displayName": {
     "defaultMessage": "1.21.4 · Fabric",
-    "description": "Label of game version 1.21.4-fabric in the version picker (template.yaml spec.versions)",
-    "sourceHash": "f38b8ebc3cf8"
+    "description": "Label of game version 1.21.4-fabric in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~14-forge.displayName": {
     "defaultMessage": "1.21.4 · Forge",
-    "description": "Label of game version 1.21.4-forge in the version picker (template.yaml spec.versions)",
-    "sourceHash": "aa17a9a0fd47"
+    "description": "Label of game version 1.21.4-forge in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~14-neoforge.displayName": {
     "defaultMessage": "1.21.4 · NeoForge",
-    "description": "Label of game version 1.21.4-neoforge in the version picker (template.yaml spec.versions)",
-    "sourceHash": "3109b831920d"
+    "description": "Label of game version 1.21.4-neoforge in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~14-paper.displayName": {
     "defaultMessage": "1.21.4 · Paper",
-    "description": "Label of game version 1.21.4-paper in the version picker (template.yaml spec.versions)",
-    "sourceHash": "dcbacc689d76"
+    "description": "Label of game version 1.21.4-paper in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~14-purpur.displayName": {
     "defaultMessage": "1.21.4 · Purpur",
-    "description": "Label of game version 1.21.4-purpur in the version picker (template.yaml spec.versions)",
-    "sourceHash": "662c13a9dec6"
+    "description": "Label of game version 1.21.4-purpur in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~14-quilt.displayName": {
     "defaultMessage": "1.21.4 · Quilt",
-    "description": "Label of game version 1.21.4-quilt in the version picker (template.yaml spec.versions)",
-    "sourceHash": "c10161f4c38e"
+    "description": "Label of game version 1.21.4-quilt in the version picker (template.yaml spec.versions)"
   },
   "versions.1~121~14-vanilla.displayName": {
     "defaultMessage": "1.21.4 · Vanilla",
-    "description": "Label of game version 1.21.4-vanilla in the version picker (template.yaml spec.versions)",
-    "sourceHash": "f7feaea61367"
+    "description": "Label of game version 1.21.4-vanilla in the version picker (template.yaml spec.versions)"
   },
   "versions.latest-fabric.displayName": {
     "defaultMessage": "Dernière · Fabric",
-    "description": "Label of game version latest-fabric in the version picker (template.yaml spec.versions)",
-    "sourceHash": "8b8b2fbefa53"
+    "description": "Label of game version latest-fabric in the version picker (template.yaml spec.versions)"
   },
   "versions.latest-paper.displayName": {
     "defaultMessage": "Dernière · Paper",
-    "description": "Label of game version latest-paper in the version picker (template.yaml spec.versions)",
-    "sourceHash": "199cf4ac7f15"
+    "description": "Label of game version latest-paper in the version picker (template.yaml spec.versions)"
   },
   "versions.latest-vanilla.displayName": {
     "defaultMessage": "Dernière · Vanilla",
-    "description": "Label of game version latest-vanilla in the version picker (template.yaml spec.versions)",
-    "sourceHash": "e97b4e17df3f"
+    "description": "Label of game version latest-vanilla in the version picker (template.yaml spec.versions)"
   }
 }

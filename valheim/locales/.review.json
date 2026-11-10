@@ -1,0 +1,22 @@
+{
+  "fr": {
+    "config.BACKUPS.description": "5b9fa10ca05c",
+    "config.BACKUPS.displayName": "302740a58919",
+    "config.BEPINEX.description": "1a5abaec514d",
+    "config.BEPINEX.displayName": "3d24a4fe4278",
+    "config.SERVER_NAME.displayName": "21babfed6c38",
+    "config.SERVER_PASS.description": "74055d0caf07",
+    "config.SERVER_PASS.displayName": "e7cf3ef4f17c",
+    "config.SERVER_PUBLIC.displayName": "db76e85987cd",
+    "config.UPDATE_CRON.description": "07cc74f7f4ba",
+    "config.UPDATE_CRON.displayName": "ead58a8bc5ca",
+    "config.WORLD_NAME.displayName": "78ae647dc554",
+    "mods.bepinex.displayName": "062e916b738a",
+    "module.displayName": "438a3d5c37f2",
+    "module.summary": "ab81114d04cc",
+    "template.description": "1f8aa55e7aa0",
+    "template.displayName": "438a3d5c37f2",
+    "versions.public-test.displayName": "3df61c7b634e",
+    "versions.stable.displayName": "90ee305714d7"
+  }
+}
