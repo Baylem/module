@@ -14,7 +14,7 @@ dashboard will then show Minecraft in the catalog.
 ## Version & loader choice
 
 The New Server wizard shows a version picker populated from `spec.versions`
-— e.g. `1.21.4 · Paper`, `1.21.4 · Forge`, `Latest · Vanilla`. Each entry
+— e.g. `26.3 · Paper`, `1.21.11 · NeoForge`, `Latest · Vanilla`. Each entry
 selects the [`itzg/minecraft-server`](https://github.com/itzg/docker-minecraft-server)
 image plus the `TYPE`/`VERSION` env that pick the server software, so you
 never set those by hand. To pin an exact image build, set
