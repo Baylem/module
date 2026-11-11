@@ -237,6 +237,13 @@
               "maxItems": 32,
               "type": "array"
             },
+            "backupFlush": {
+              "description": "BackupFlush requests an acknowledged checkpoint without disabling writes.",
+              "enum": [
+                "minecraft-save-all"
+              ],
+              "type": "string"
+            },
             "lifecycle": {
               "description": "Lifecycle configures graceful lifecycle transitions the agent drives\nover RCON \u2014 currently the in-game stop sequence the operator runs\nbefore scaling the server down, so the world is saved and shut down\ncleanly instead of relying on a container SIGTERM. Requires\nrcon.protocol != none.",
               "properties": {
@@ -836,7 +843,13 @@
               "type": "object"
             }
           },
-          "type": "object"
+          "type": "object",
+          "x-kubernetes-validations": [
+            {
+              "message": "choose a flush-only checkpoint or a write-freeze declaration",
+              "rule": "!(has(self.backupFlush) && has(self.quiesce))"
+            }
+          ]
         },
         "categories": {
           "description": "Categories group this game in the dashboard's catalog and Create\nServer picker (e.g. [\"Survival\", \"Sandbox\"]). A game may belong to\nseveral at once \u2014 Minecraft is reasonably Sandbox, Survival and\nCreative. The dashboard builds its category filter from the distinct\nvalues present across installed templates, so a module introduces a\nnew category simply by naming it here \u2014 no frontend change. Empty\nfalls back to a heuristic on the game slug, and finally to \"Other\".\ndocs/module-authoring.md publishes the canonical vocabulary the\nofficial modules use.",
@@ -2174,6 +2187,10 @@
         {
           "message": "capabilities.mods.loaders requires a non-empty spec.versions catalog (a mod loader is selected by versions[].loader)",
           "rule": "!has(self.capabilities) || !has(self.capabilities.mods) || !has(self.capabilities.mods.loaders) || size(self.capabilities.mods.loaders) == 0 || (has(self.versions) && size(self.versions) > 0)"
+        },
+        {
+          "message": "backupFlush requires the Minecraft Java adapter",
+          "rule": "!has(self.capabilities) || !has(self.capabilities.backupFlush) || self.game == 'minecraft-java'"
         }
       ]
     },
