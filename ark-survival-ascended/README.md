@@ -104,6 +104,13 @@ actually holds saves and `GameUserSettings.ini`. Default size is 30 GiB;
 ASA's base install alone is roughly 11 GiB, so heavy mod/save usage may
 need more.
 
+## Backups
+
+**Save world** runs `SaveWorld`. ARK can change world and player files again
+while a live backup is copying them. For a stopped copy, shut down the server,
+wait for it to stop, then request a backup with quiesce enabled. Keep the
+server stopped until the backup completes.
+
 ## Known limitations
 
 - `SaveWorld`/`DoExit` and `ServerChat` are corroborated by community

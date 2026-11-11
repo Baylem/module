@@ -35,7 +35,7 @@ metadata:
 spec:
   displayName: Project Zomboid
   game: project-zomboid
-  version: 1.0.5
+  version: 1.0.6
   categories: [Survival, Horror, Co-op]
   accentColor: "#336600"
   description: |
@@ -132,12 +132,6 @@ spec:
     # first is the commonly recommended safe sequence.
     lifecycle:
       stop: ["save", "quit"]
-    # `save` is a real, idempotent force-save command; there's no PZ
-    # equivalent of Minecraft's save-off/save-on write-pause pair, so
-    # quiesce and unquiesce both just force a flush around the snapshot.
-    quiesce:
-      quiesce: ["save"]
-      unquiesce: ["save"]
     actions:
       - id: broadcast
         displayName: Broadcast

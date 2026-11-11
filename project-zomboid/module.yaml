@@ -2,7 +2,7 @@
 apiVersion: gameplane.local/module/v1
 name: project-zomboid
 displayName: Project Zomboid
-version: 1.0.5
+version: 1.0.6
 game: project-zomboid
 categories: [Survival, Horror, Co-op]
 summary: Project Zomboid dedicated server (sknnr/zomboid-dedicated-server) with RCON console/moderation and Steam Workshop mods via the game's own MOD_IDS/MOD_NAMES sync.
