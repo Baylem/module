@@ -23,7 +23,7 @@ spec:
   displayName: Minecraft (Java Edition)
   game: minecraft-java
   # Kept in lockstep with module.yaml's bundle version from 2.5.0 onward.
-  version: 2.9.1
+  version: 2.10.0
   categories: [Sandbox, Survival, Building, Modded, Creative]
   # Brand color the dashboard tints this game's icon/accents with.
   accentColor: "#5b9a3e"
@@ -97,9 +97,10 @@ spec:
   # TYPE+VERSION env, so entries inject those rather than swapping the tag
   # (the tag pins only the itzg release / Java runtime: java8-multiarch for
   # ≤1.16.5, java17 for 1.18.2–1.20.x, java21 for 1.21.x, java25 for the
-  # moving LATEST — current Minecraft needs a JRE newer than 21). The loader keys
-  # into capabilities.mods.loaders below to pick the per-combo mod volume,
-  # and is used verbatim as the Modrinth loader facet.
+  # year-numbered 26.x releases and the moving LATEST — they need a JRE
+  # newer than 21). The loader keys into capabilities.mods.loaders below to
+  # pick the per-combo mod volume, and is used verbatim as the Modrinth
+  # loader facet.
   versions:
     # ── Latest (moving) ────────────────────────────────────────────────
     - id: "latest-paper"
@@ -123,6 +124,104 @@ spec:
       env:
         - { name: TYPE, value: VANILLA }
         - { name: VERSION, value: LATEST }
+    # ── 26.3 (year-based numbering, Java 25) ─────────────────────────────
+    - id: "26.3-paper"
+      displayName: "26.3 · Paper"
+      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      loader: paper
+      gameVersion: "26.3"
+      env:
+        - { name: TYPE, value: PAPER }
+        - { name: VERSION, value: "26.3" }
+    - id: "26.3-purpur"
+      displayName: "26.3 · Purpur"
+      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      loader: purpur
+      gameVersion: "26.3"
+      env:
+        - { name: TYPE, value: PURPUR }
+        - { name: VERSION, value: "26.3" }
+    - id: "26.3-fabric"
+      displayName: "26.3 · Fabric"
+      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      loader: fabric
+      gameVersion: "26.3"
+      env:
+        - { name: TYPE, value: FABRIC }
+        - { name: VERSION, value: "26.3" }
+    - id: "26.3-quilt"
+      displayName: "26.3 · Quilt"
+      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      loader: quilt
+      gameVersion: "26.3"
+      env:
+        - { name: TYPE, value: QUILT }
+        - { name: VERSION, value: "26.3" }
+    - id: "26.3-forge"
+      displayName: "26.3 · Forge"
+      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      loader: forge
+      gameVersion: "26.3"
+      env:
+        - { name: TYPE, value: FORGE }
+        - { name: VERSION, value: "26.3" }
+    - id: "26.3-neoforge"
+      displayName: "26.3 · NeoForge"
+      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      loader: neoforge
+      gameVersion: "26.3"
+      env:
+        - { name: TYPE, value: NEOFORGE }
+        - { name: VERSION, value: "26.3" }
+    - id: "26.3-vanilla"
+      displayName: "26.3 · Vanilla"
+      image: itzg/minecraft-server:java25@sha256:9faa6aefeedd5a883c3ee241653fd1421529bdbafc428d0513e43cae0f2b7d68
+      loader: vanilla
+      gameVersion: "26.3"
+      env:
+        - { name: TYPE, value: VANILLA }
+        - { name: VERSION, value: "26.3" }
+    # ── 1.21.11 (last 1.x release) ───────────────────────────────────────
+    - id: "1.21.11-paper"
+      displayName: "1.21.11 · Paper"
+      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      loader: paper
+      gameVersion: "1.21.11"
+      env:
+        - { name: TYPE, value: PAPER }
+        - { name: VERSION, value: "1.21.11" }
+    - id: "1.21.11-fabric"
+      displayName: "1.21.11 · Fabric"
+      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      loader: fabric
+      gameVersion: "1.21.11"
+      env:
+        - { name: TYPE, value: FABRIC }
+        - { name: VERSION, value: "1.21.11" }
+    - id: "1.21.11-forge"
+      displayName: "1.21.11 · Forge"
+      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      loader: forge
+      gameVersion: "1.21.11"
+      env:
+        - { name: TYPE, value: FORGE }
+        - { name: VERSION, value: "1.21.11" }
+    - id: "1.21.11-neoforge"
+      displayName: "1.21.11 · NeoForge"
+      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      loader: neoforge
+      gameVersion: "1.21.11"
+      env:
+        - { name: TYPE, value: NEOFORGE }
+        - { name: VERSION, value: "1.21.11" }
+    - id: "1.21.11-vanilla"
+      displayName: "1.21.11 · Vanilla"
+      image: itzg/minecraft-server:java21@sha256:f71555873bdaa6f4b663563de58678cca334bc51bdfbe548f7958ee9f516cf4a
+      loader: vanilla
+      gameVersion: "1.21.11"
+      env:
+        - { name: TYPE, value: VANILLA }
+        - { name: VERSION, value: "1.21.11" }
     # ── 1.21.4 ─────────────────────────────────────────────────────────
     - id: "1.21.4-paper"
       displayName: "1.21.4 · Paper"

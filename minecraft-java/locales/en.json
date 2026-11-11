@@ -451,6 +451,26 @@
     "defaultMessage": "1.21.1 · Vanilla",
     "description": "Label of game version 1.21.1-vanilla in the version picker (template.yaml spec.versions)"
   },
+  "versions.1~121~111-fabric.displayName": {
+    "defaultMessage": "1.21.11 · Fabric",
+    "description": "Label of game version 1.21.11-fabric in the version picker (template.yaml spec.versions)"
+  },
+  "versions.1~121~111-forge.displayName": {
+    "defaultMessage": "1.21.11 · Forge",
+    "description": "Label of game version 1.21.11-forge in the version picker (template.yaml spec.versions)"
+  },
+  "versions.1~121~111-neoforge.displayName": {
+    "defaultMessage": "1.21.11 · NeoForge",
+    "description": "Label of game version 1.21.11-neoforge in the version picker (template.yaml spec.versions)"
+  },
+  "versions.1~121~111-paper.displayName": {
+    "defaultMessage": "1.21.11 · Paper",
+    "description": "Label of game version 1.21.11-paper in the version picker (template.yaml spec.versions)"
+  },
+  "versions.1~121~111-vanilla.displayName": {
+    "defaultMessage": "1.21.11 · Vanilla",
+    "description": "Label of game version 1.21.11-vanilla in the version picker (template.yaml spec.versions)"
+  },
   "versions.1~121~14-fabric.displayName": {
     "defaultMessage": "1.21.4 · Fabric",
     "description": "Label of game version 1.21.4-fabric in the version picker (template.yaml spec.versions)"
@@ -478,6 +498,34 @@
   "versions.1~121~14-vanilla.displayName": {
     "defaultMessage": "1.21.4 · Vanilla",
     "description": "Label of game version 1.21.4-vanilla in the version picker (template.yaml spec.versions)"
+  },
+  "versions.26~13-fabric.displayName": {
+    "defaultMessage": "26.3 · Fabric",
+    "description": "Label of game version 26.3-fabric in the version picker (template.yaml spec.versions)"
+  },
+  "versions.26~13-forge.displayName": {
+    "defaultMessage": "26.3 · Forge",
+    "description": "Label of game version 26.3-forge in the version picker (template.yaml spec.versions)"
+  },
+  "versions.26~13-neoforge.displayName": {
+    "defaultMessage": "26.3 · NeoForge",
+    "description": "Label of game version 26.3-neoforge in the version picker (template.yaml spec.versions)"
+  },
+  "versions.26~13-paper.displayName": {
+    "defaultMessage": "26.3 · Paper",
+    "description": "Label of game version 26.3-paper in the version picker (template.yaml spec.versions)"
+  },
+  "versions.26~13-purpur.displayName": {
+    "defaultMessage": "26.3 · Purpur",
+    "description": "Label of game version 26.3-purpur in the version picker (template.yaml spec.versions)"
+  },
+  "versions.26~13-quilt.displayName": {
+    "defaultMessage": "26.3 · Quilt",
+    "description": "Label of game version 26.3-quilt in the version picker (template.yaml spec.versions)"
+  },
+  "versions.26~13-vanilla.displayName": {
+    "defaultMessage": "26.3 · Vanilla",
+    "description": "Label of game version 26.3-vanilla in the version picker (template.yaml spec.versions)"
   },
   "versions.latest-fabric.displayName": {
     "defaultMessage": "Latest · Fabric",
