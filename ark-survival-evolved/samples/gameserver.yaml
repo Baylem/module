@@ -10,9 +10,8 @@ spec:
   config:
     SESSION_NAME: "Gameplane ARK Server"
     SERVER_PASSWORD: ""
-    RCON_PASSWORD: "secret-rcon-password"
     MAX_PLAYERS: "70"
-    MAP_NAME: "TheIsland"
+    SERVER_MAP: "TheIsland"
     CLUSTER_ID: "cluster-alpha"
 
   networking:
@@ -20,6 +19,8 @@ spec:
     portOverrides:
       - name: game
         nodePort: 30777
+      - name: raw
+        nodePort: 30778
       - name: query
         nodePort: 32015
 

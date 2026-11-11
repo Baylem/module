@@ -1,8 +1,12 @@
 # yaml-language-server: $schema=../.schema/gametemplate.schema.json
 # Gameplane GameTemplate for ARK: Survival Evolved (dedicated server).
 #
-# Dedicated server for ARK: Survival Evolved running on Linux.
-# The whole ARK install lives under /data; persistent world state and cluster directory live under /data/ShooterGame/Saved.
+# Runs the community image hermsi/ark-server
+# (https://github.com/Hermsi1337/docker-ark-server), which installs and
+# updates the server with SteamCMD and runs it under arkmanager.
+# The volume is mounted at /app, the image's own data root: the game install
+# lives in /app/server, with saves under /app/server/ShooterGame/Saved.
+# Cluster transfer data lives in its own volume at /cluster.
 #
 # Cluster-scoped; apply once per cluster:
 #     kubectl apply -f modules/ark-survival-evolved/template.yaml
@@ -16,30 +20,60 @@ metadata:
 spec:
   displayName: "ARK: Survival Evolved"
   game: ark-survival-evolved
-  version: 1.1.0
+  version: 2.0.0
   categories: [Survival, Open World, Multiplayer, Dinosaurs]
   accentColor: "#00b2e2"
   description: |
     ARK: Survival Evolved dedicated server. Source RCON powers remote administration
-    and server actions. Persistent world state and cross-shard cluster transfers live
-    under `/data/ShooterGame/Saved`, on the same volume as the game install.
+    and server actions. The game install and world saves live under `/app/server`;
+    cross-shard cluster transfers live in their own volume at `/cluster`.
 
-  image: ghcr.io/gameplanepanel/gameplane/ark-survival-evolved:latest@sha256:2a4298f8055dbff4107c49c961cace1f2bed42809e6b93fb4924371ae4484e58
+  image: hermsi/ark-server:latest@sha256:ce291990613e76f7019be31b96fe247188ce4957724c913c0e30097042c44bf5
 
   versions:
     - id: latest
       displayName: "Latest"
-      image: ghcr.io/gameplanepanel/gameplane/ark-survival-evolved:latest@sha256:2a4298f8055dbff4107c49c961cace1f2bed42809e6b93fb4924371ae4484e58
+      image: hermsi/ark-server:latest-1794213856@sha256:ce291990613e76f7019be31b96fe247188ce4957724c913c0e30097042c44bf5
       default: true
 
+  # The image starts as root: its entrypoint fixes volume ownership, loads
+  # the crontab, then drops to the `steam` user (UID/GID 1000) with gosu.
+  # Do NOT set runAsUser here, or the entrypoint cannot drop privileges.
+  # fsGroup lets the dropped user write the PVCs.
   security:
-    runAsUser: 10000
-    runAsGroup: 10000
-    fsGroup: 10000
+    fsGroup: 1000
+
+  env:
+    # Without these the image's own defaults apply: a server password of
+    # "YouShallNotPass" and no update on start. An empty SERVER_PASSWORD
+    # here means an open server; the config field below overrides it.
+    - name: SERVER_PASSWORD
+      value: ""
+    # Update the server through SteamCMD on every start, as 1.x did.
+    - name: UPDATE_ON_START
+      value: "true"
+    # Gameplane runs its own backups; arkmanager's pre-update backup would
+    # only fill the volume.
+    - name: PRE_UPDATE_BACKUP
+      value: "false"
+    # Gameplane advertises the game port and the raw socket port separately.
+    - name: GAME_CLIENT_PORT
+      value: "7777"
+    - name: UDP_SOCKET_PORT
+      value: "7778"
+    - name: SERVER_LIST_PORT
+      value: "27015"
+    - name: RCON_PORT
+      value: "27020"
 
   ports:
     - name: game
       containerPort: 7777
+      protocol: UDP
+      advertise: true
+    # Raw UDP socket, always game port + 1. ARK clients need it to join.
+    - name: raw
+      containerPort: 7778
       protocol: UDP
       advertise: true
     - name: query
@@ -53,7 +87,13 @@ spec:
 
   storage:
     size: 35Gi
-    mountPath: /data
+    mountPath: /app
+    extra:
+      # The image keeps cluster transfer data (uploaded survivors, dinos
+      # and items) in /cluster, outside /app.
+      - name: cluster
+        mountPath: /cluster
+        size: 1Gi
 
   resources:
     requests: {cpu: "2", memory: 8Gi}
@@ -62,7 +102,7 @@ spec:
   rcon:
     protocol: source
     port: 27020
-    passwordEnv: RCON_PASSWORD
+    passwordEnv: ADMIN_PASSWORD
 
   consoleMode: rcon
 
@@ -123,15 +163,11 @@ spec:
       displayName: Server Password
       type: password
       default: ""
-    - name: RCON_PASSWORD
-      displayName: RCON Password
-      type: password
-      default: ""
     - name: MAX_PLAYERS
       displayName: Max Players
       type: int
       default: 70
-    - name: MAP_NAME
+    - name: SERVER_MAP
       displayName: Map Name
       type: string
       default: "TheIsland"
