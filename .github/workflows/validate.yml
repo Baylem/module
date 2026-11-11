@@ -52,6 +52,9 @@ jobs:
       - name: Test validate.py directory layout rules
         run: ./test-validate-py.sh
 
+      - name: Check Palworld frame rate against an engine response
+        run: python3 test-palworld-performance.py
+
       - uses: actions/setup-go@v5
         with:
           go-version: "1.26"

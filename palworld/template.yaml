@@ -36,7 +36,7 @@ spec:
   displayName: Palworld (Dedicated)
   game: palworld
   # Kept in lockstep with module.yaml's bundle version.
-  version: 1.2.0
+  version: 1.3.0
   categories: [Survival, Sandbox, Co-op]
   # Brand color the dashboard tints this game's icon/accents with.
   accentColor: "#3d9dd9"
@@ -133,6 +133,16 @@ spec:
       loader: pak
 
   capabilities:
+    status:
+      metrics:
+        - id: server-fps
+          displayName: Server frame rate
+          command: metrics
+          regex: '"serverfps"\s*:\s*(?P<value>[0-9]+)\s*[,}]'
+          unit: FPS
+          performance:
+            signal: frame_rate
+            unit: per_second
     players:
       # /v1/api/players returns JSON; the agent applies entryRegex with
       # FindAll across the whole reply, so this lifts out every player's

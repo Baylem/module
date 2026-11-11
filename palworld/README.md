@@ -46,6 +46,12 @@ in-game admin commands, or the REST API directly, for kick/ban.
 (counts down, then shuts down cleanly) — see the server detail page's
 Actions panel.
 
+The Overview and Prometheus expose the dedicated server's frame rate from
+`GET /v1/api/metrics` in frames per second. An observed zero is a valid
+reading. Missing data, failed authentication and stale responses leave the
+numeric series absent. The module sets no universal frame-rate threshold.
+[Palworld REST metrics](https://docs.palworldgame.com/api/rest-api/metrics/)
+
 ## Mods (.pak)
 
 The Mods tab manages engine-native **`.pak` mods** in
