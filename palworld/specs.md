@@ -48,7 +48,9 @@ Declared ports under `spec.ports`:
 - **Protocol**: `palworld` (REST admin API over HTTP Basic auth)
 - **Console Mode**: `rcon`
 - **Authentication**: HTTP Basic authentication (user `admin`), password supplied via `spec.rcon.passwordEnv: ADMIN_PASSWORD`.
-- **Command Support**: REST endpoints for `announce`, `save`, `shutdown`, `stop`, `players`, and `info`.
+- **Command Support**: REST endpoints for `announce`, `save`, `shutdown`, `stop`, `players`, `info`, and `metrics`.
+- The `server-fps` readout parses `serverfps` from the metrics response as an integer frame rate in frames per second. Missing, null or malformed values yield no numeric sample.
+- `samples/metrics.json` records the authenticated response of an empty Linux dedicated server, v1.0.5.102999 (Steam build 25247047). The instantaneous value was 59 FPS. The average FPS and frame time are separate engine fields.
 
 ---
 
