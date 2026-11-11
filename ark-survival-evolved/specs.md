@@ -11,11 +11,11 @@
 
 ## 2. Container Image & Architecture
 
-- **Base Image**: `ghcr.io/gameplanepanel/gameplane/ark-survival-evolved:latest@sha256:2a4298f8055dbff4107c49c961cace1f2bed42809e6b93fb4924371ae4484e58`
+- **Base Image**: `hermsi/ark-server:latest@sha256:ce291990613e76f7019be31b96fe247188ce4957724c913c0e30097042c44bf5`
 - **Architecture**: `linux/amd64`
-- **Image Source**: Built from `images/games/ark-survival-evolved/` in the main Gameplane repository on the shared SteamCMD base.
-- **Runtime Model**: SteamCMD Linux dedicated server (`ShooterGameServer`).
-- **User & Execution Context**: UID 10000, GID 10000, working directory `/data`.
+- **Image Source**: Community image from https://github.com/Hermsi1337/docker-ark-server, rebuilt weekly on `cm2network/steamcmd`. Chosen over a Gameplane-built image on 2026-11-11 (maintainer ruling: use a maintained public image when one exists).
+- **Runtime Model**: SteamCMD Linux dedicated server (`ShooterGameServer`), installed, updated and run by arkmanager (`arkmanager run`).
+- **User & Execution Context**: Starts as root, then drops to `steam` (UID/GID 1000) with gosu. Working directory `/app`.
 
 ---
 
@@ -26,6 +26,7 @@ Declared ports under `spec.ports`:
 | Port Name | Container Port | Protocol | Usage / Purpose |
 |---|---|---|---|
 | `game` | 7777 | UDP | Primary gameplay traffic |
+| `raw` | 7778 | UDP | Raw UDP socket, always game port + 1 |
 | `query` | 27015 | UDP | Steam A2S browser discovery |
 | `rcon` | 27020 | TCP | Remote administrative console (Source RCON) |
 
@@ -33,13 +34,15 @@ Declared ports under `spec.ports`:
 
 ## 4. Storage & Persistence Layout
 
-- **Mount Path**: `/data`
+- **Mount Path**: `/app` (the image's declared volume)
 - **Default Sizing**: `35Gi`
 - **Persisted Content**:
-  - Saved worlds, tribe data, and dinosaur entities (`SavedArks/`)
-  - Server configuration files (`Config/LinuxServer/GameUserSettings.ini`)
-  - Cross-server cluster transfers (`clusters/`)
-- **Non-Shadowing Invariant**: The volume holds the whole install, so nothing in the image is shadowed (the image ships only SteamCMD and the entrypoint).
+  - Game install (`/app/server`)
+  - Saved worlds, tribe data, and dinosaur entities (`/app/server/ShooterGame/Saved/SavedArks/`)
+  - Server configuration files (`/app/server/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini`)
+  - arkmanager configuration, logs and update staging (`/app/arkmanager`, `/app/log`, `/app/staging`)
+- **Extra Volume**: `cluster`, `1Gi`, mounted at `/cluster` for cross-server cluster transfers (the image sets `-ClusterDirOverride=/cluster` when `CLUSTER_ID` is set).
+- **Non-Shadowing Invariant**: The image's entrypoints live in `/`, outside both mounts, and `/app` holds no baked game content.
 
 ---
 
@@ -47,7 +50,7 @@ Declared ports under `spec.ports`:
 
 - **Protocol**: `source`
 - **Console Mode**: `rcon`
-- **Authentication**: Password supplied via `RCON_PASSWORD`.
+- **Authentication**: The operator-generated password is supplied via `ADMIN_PASSWORD` (`rcon.passwordEnv`), which arkmanager writes as `ServerAdminPassword` with `RCONEnabled=True`.
 - **Command Support**: In-game moderation (`KickPlayer`, `BanPlayer`), world saving (`SaveWorld`), broadcasts (`ServerChat`).
 
 ---
@@ -69,15 +72,15 @@ Declared ports under `spec.ports`:
         - "SaveWorld"
         - "DoExit"
   ```
-- **Signal Handling**: Server cleanly saves before terminating on `SIGINT`/`SIGTERM`.
+- **Signal Handling**: The image traps `SIGTERM`/`SIGINT` and stops the server through arkmanager, which saves first.
 
 ---
 
 ## 8. Key Invariants & Security
 
-- **User Matching**: `spec.security.runAsUser: 10000` matches image user.
-- **Environment**: `HOME=/home/gameserver` is baked into the image (no `spec.env` entry needed).
-- **Filesystem Permissions**: `spec.security.fsGroup: 10000` ensures volume read/write permissions.
+- **No runAsUser**: the image must start as root so its entrypoint can drop to `steam`. It therefore cannot run with the operator's restricted workloads enabled.
+- **Filesystem Permissions**: `spec.security.fsGroup: 1000` gives the dropped `steam` user write access to both volumes.
+- **Image Defaults Overridden in `spec.env`**: `SERVER_PASSWORD=""` (the image default is `YouShallNotPass`), `UPDATE_ON_START=true` (update on every start, as 1.x did), `PRE_UPDATE_BACKUP=false` (Gameplane runs its own backups), and the four port variables.
 
 ---
 
