@@ -2,7 +2,7 @@
 apiVersion: gameplane.local/module/v1
 name: ark-survival-ascended
 displayName: "ARK: Survival Ascended"
-version: 1.0.8
+version: 1.0.9
 game: ark-survival-ascended
 categories: [Survival, PvP, Co-op, Modded]
 summary: "ARK: Survival Ascended dedicated server (mschnitzer/asa-linux-server) with RCON console/moderation. CurseForge mods install via the game's own -mods= launch parameter."

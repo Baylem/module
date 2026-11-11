@@ -48,11 +48,12 @@ Default size is 15 GiB — heavy Workshop mod usage may need more.
 
 ## Backups
 
-`AUTOSAVE_INTERVAL` controls the game's own periodic save; the **Save
-world** action forces one immediately and is also what backup quiesce
-runs before a snapshot. The image's own `BACKUPS_PERIOD`/`BACKUPS_COUNT`
-env vars are not wired here — use the Gameplane Backup CRD as the
-authoritative snapshot path instead.
+`AUTOSAVE_INTERVAL` controls periodic saves. **Save world** forces an
+immediate save. Project Zomboid can write map chunks and player data during
+a live backup. For a stopped copy, shut down the server, wait for it to stop,
+then request a backup with quiesce enabled. Keep the server stopped until the
+backup completes. Use the Gameplane Backup CRD to request the copy. The
+image also supports `BACKUPS_PERIOD` and `BACKUPS_COUNT` outside this template.
 
 ## Sample
 

@@ -59,7 +59,7 @@ metadata:
 spec:
   displayName: "ARK: Survival Ascended"
   game: ark-survival-ascended
-  version: 1.0.8
+  version: 1.0.9
   categories: [Survival, PvP, Co-op, Modded]
   accentColor: "#00b2e2"
   description: |
@@ -157,9 +157,6 @@ spec:
     # sufficient.
     lifecycle:
       stop: ["SaveWorld", "DoExit"]
-    quiesce:
-      quiesce: ["SaveWorld"]
-      unquiesce: ["SaveWorld"]
     actions:
       - id: broadcast
         displayName: Broadcast

@@ -36,6 +36,9 @@ jobs:
       - name: Install PyYAML
         run: pip install --disable-pip-version-check --user pyyaml
 
+      - name: Check flush-only backup capabilities
+        run: python3 test-backup-capabilities.py
+
       - name: Run module preflight validator
         run: python3 validate.py
 
