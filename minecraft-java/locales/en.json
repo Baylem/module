@@ -256,12 +256,28 @@
     "description": "Label of configuration field HARDCORE (template.yaml spec.configSchema)"
   },
   "config.INIT_MEMORY.description": {
-    "defaultMessage": "Starting heap size (-Xms), at most JVM max heap. Leave empty to match the automatic max heap (a fixed heap avoids GC resizes).",
+    "defaultMessage": "Starting heap, for example 512M or 37.5%. Leave empty for 75% of the container memory limit. Keep the initial heap at or below the maximum.",
     "description": "Help text of configuration field INIT_MEMORY (template.yaml spec.configSchema)"
   },
   "config.INIT_MEMORY.displayName": {
     "defaultMessage": "JVM initial heap",
     "description": "Label of configuration field INIT_MEMORY (template.yaml spec.configSchema)"
+  },
+  "config.JVM_OPTS.description": {
+    "defaultMessage": "Space-separated Java options, for example -Dfile.encoding=UTF-8.",
+    "description": "Help text of configuration field JVM_OPTS (template.yaml spec.configSchema)"
+  },
+  "config.JVM_OPTS.displayName": {
+    "defaultMessage": "Additional JVM options",
+    "description": "Label of configuration field JVM_OPTS (template.yaml spec.configSchema)"
+  },
+  "config.JVM_XX_OPTS.description": {
+    "defaultMessage": "Space-separated JVM tuning options, for example -XX:+PrintCommandLineFlags.",
+    "description": "Help text of configuration field JVM_XX_OPTS (template.yaml spec.configSchema)"
+  },
+  "config.JVM_XX_OPTS.displayName": {
+    "defaultMessage": "Additional JVM tuning options",
+    "description": "Label of configuration field JVM_XX_OPTS (template.yaml spec.configSchema)"
   },
   "config.LEVEL_SEED.description": {
     "defaultMessage": "Leave blank for a random seed.",
@@ -272,7 +288,7 @@
     "description": "Label of configuration field LEVEL_SEED (template.yaml spec.configSchema)"
   },
   "config.MAX_MEMORY.description": {
-    "defaultMessage": "Java heap ceiling (-Xmx, e.g. 2G, 3072M). Leave empty to size it automatically to 75% of the container memory limit — it then tracks the limit whenever you resize the server. If you set it yourself, keep roughly 25% below the limit: the JVM needs headroom for non-heap memory, and exceeding the limit gets the server OOM-killed.",
+    "defaultMessage": "Heap ceiling, for example 2G or 65%. Leave empty for 75% of the container memory limit. Allow room for memory outside the Java heap.",
     "description": "Help text of configuration field MAX_MEMORY (template.yaml spec.configSchema)"
   },
   "config.MAX_MEMORY.displayName": {
@@ -322,6 +338,14 @@
   "config.PVP.displayName": {
     "defaultMessage": "PvP enabled",
     "description": "Label of configuration field PVP (template.yaml spec.configSchema)"
+  },
+  "config.USE_AIKAR_FLAGS.description": {
+    "defaultMessage": "Let the image select its Aikar garbage collection flags for this JVM and heap.",
+    "description": "Help text of configuration field USE_AIKAR_FLAGS (template.yaml spec.configSchema)"
+  },
+  "config.USE_AIKAR_FLAGS.displayName": {
+    "defaultMessage": "Use Aikar''s flags",
+    "description": "Label of configuration field USE_AIKAR_FLAGS (template.yaml spec.configSchema)"
   },
   "config.VIEW_DISTANCE.displayName": {
     "defaultMessage": "View distance (chunks)",

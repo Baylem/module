@@ -256,12 +256,28 @@
     "description": "Label of configuration field HARDCORE (template.yaml spec.configSchema)"
   },
   "config.INIT_MEMORY.description": {
-    "defaultMessage": "Taille initiale du tas (-Xms), au maximum égale au maximum de la JVM. Laisser vide pour correspondre au tas maximum automatique (un tas fixe évite les redimensionnements du GC).",
+    "defaultMessage": "Taille initiale du tas, par exemple 512M ou 37.5%. Laisser vide pour utiliser 75 % de la limite mémoire du conteneur. La taille initiale doit être inférieure ou égale au maximum.",
     "description": "Help text of configuration field INIT_MEMORY (template.yaml spec.configSchema)"
   },
   "config.INIT_MEMORY.displayName": {
     "defaultMessage": "Tas initial de la JVM",
     "description": "Label of configuration field INIT_MEMORY (template.yaml spec.configSchema)"
+  },
+  "config.JVM_OPTS.description": {
+    "defaultMessage": "Options Java séparées par des espaces, par exemple -Dfile.encoding=UTF-8.",
+    "description": "Help text of configuration field JVM_OPTS (template.yaml spec.configSchema)"
+  },
+  "config.JVM_OPTS.displayName": {
+    "defaultMessage": "Options JVM supplémentaires",
+    "description": "Label of configuration field JVM_OPTS (template.yaml spec.configSchema)"
+  },
+  "config.JVM_XX_OPTS.description": {
+    "defaultMessage": "Options de réglage de la JVM séparées par des espaces, par exemple -XX:+PrintCommandLineFlags.",
+    "description": "Help text of configuration field JVM_XX_OPTS (template.yaml spec.configSchema)"
+  },
+  "config.JVM_XX_OPTS.displayName": {
+    "defaultMessage": "Options de réglage supplémentaires de la JVM",
+    "description": "Label of configuration field JVM_XX_OPTS (template.yaml spec.configSchema)"
   },
   "config.LEVEL_SEED.description": {
     "defaultMessage": "Laisser vide pour une graine aléatoire.",
@@ -272,7 +288,7 @@
     "description": "Label of configuration field LEVEL_SEED (template.yaml spec.configSchema)"
   },
   "config.MAX_MEMORY.description": {
-    "defaultMessage": "Plafond du tas Java (-Xmx, ex. 2G, 3072M). Laisser vide pour le dimensionner automatiquement à 75 % de la limite de mémoire du conteneur : il suit alors la limite à chaque redimensionnement du serveur. Si vous le définissez vous-même, gardez environ 25 % de marge sous la limite : la JVM a besoin de place pour la mémoire hors tas, et dépasser la limite entraîne l’arrêt du serveur par OOM-kill.",
+    "defaultMessage": "Plafond du tas, par exemple 2G ou 65%. Laisser vide pour utiliser 75 % de la limite mémoire du conteneur. Prévoir de la mémoire en dehors du tas Java.",
     "description": "Help text of configuration field MAX_MEMORY (template.yaml spec.configSchema)"
   },
   "config.MAX_MEMORY.displayName": {
@@ -322,6 +338,14 @@
   "config.PVP.displayName": {
     "defaultMessage": "PvP activé",
     "description": "Label of configuration field PVP (template.yaml spec.configSchema)"
+  },
+  "config.USE_AIKAR_FLAGS.description": {
+    "defaultMessage": "Laisser l’image choisir les options de ramasse-miettes d’Aikar adaptées à la JVM et au tas.",
+    "description": "Help text of configuration field USE_AIKAR_FLAGS (template.yaml spec.configSchema)"
+  },
+  "config.USE_AIKAR_FLAGS.displayName": {
+    "defaultMessage": "Utiliser les options d’Aikar",
+    "description": "Label of configuration field USE_AIKAR_FLAGS (template.yaml spec.configSchema)"
   },
   "config.VIEW_DISTANCE.displayName": {
     "defaultMessage": "Distance d’affichage (chunks)",

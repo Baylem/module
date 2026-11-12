@@ -2,10 +2,10 @@
 apiVersion: gameplane.local/module/v1
 name: minecraft-java
 displayName: Minecraft (Java Edition)
-version: 2.11.0
+version: 2.12.0
 game: minecraft-java
 categories: [Sandbox, Survival, Building, Modded, Creative]
 summary: Vanilla / Paper / Spigot / Bukkit / Purpur / Forge / NeoForge / Fabric / Quilt servers (itzg/minecraft-server) with a version+loader picker spanning 1.16.5–latest, per-loader mod volumes, and in-app Modrinth browse.
 homepage: https://www.minecraft.net/
 license: MIT
-gameplaneMinVersion: 0.2.0-beta.7
+gameplaneMinVersion: 0.4.1

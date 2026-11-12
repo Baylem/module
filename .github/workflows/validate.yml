@@ -55,6 +55,9 @@ jobs:
       - name: Check Palworld frame rate against an engine response
         run: python3 test-palworld-performance.py
 
+      - name: Check Minecraft JVM settings in the pinned image
+        run: python3 test-minecraft-jvm.py
+
       - name: Check ARK world migration in the pinned vendor image
         run: python3 test-ark-volume-migration.py
 

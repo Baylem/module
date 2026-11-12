@@ -36,23 +36,25 @@ one-click install a mod or plugin by name without hunting for a URL. The
 chosen file downloads through the same allowlist (Modrinth's CDN is listed).
 **From URL** install remains available for anything not on Modrinth.
 
-## Memory / JVM heap
+## JVM startup settings (2.12.0)
 
-Left empty (the default), the wizard's **JVM max heap** / **JVM initial
-heap** fields (configSchema `MAX_MEMORY` / `INIT_MEMORY`) are sized
-automatically to **75% of the container memory limit** — pick 8Gi of
-memory and the heap becomes 6144M, and it re-tracks the limit whenever
-you resize the server. The remaining 25% is headroom for non-heap JVM
-memory: the limit only caps the cgroup — it does not size the heap — so
-a heap at or above the limit gets the server OOM-killed, and a limit far
-above the heap wastes RAM the JVM will never touch. Automatic sizing
-needs gameplane ≥ 0.2.0-beta.6 (`gameplaneMinVersion` gates this bundle
-accordingly).
+Install the Gameplane CRDs and operator with support for `applyOnRestart`
+before updating the catalog module to 2.12.0 (minimum Gameplane 0.4.1).
+Adopting this template on a running server can restart it once. A server
+using the OnRequest template policy can schedule that adoption. Once adopted,
+saving or clearing heap sizes, extra JVM options or Aikar's flags leaves the
+running game in place. Restart it when ready to use the new values.
 
-Setting either field explicitly (e.g. `2G`, `3072M`) turns the automatic
-sizing off for that field and feeds the value straight to the itzg
-image's `-Xmx`/`-Xms` plumbing; keep an explicit max heap roughly 25%
-below the container limit for the same reason.
+Each empty heap field independently defaults to 75% of the container memory
+limit, rounded down to whole MiB. A 4Gi limit gives 3072M for each automatic
+field. To set the maximum to 2G, also set an initial heap of 2G or less.
+Leave space for the JVM's non-heap allocations.
+
+Fixed sizes such as `512M` and `2G` become `-Xms` and `-Xmx`. A value such
+as `37.5%` selects the JVM's InitialRAMPercentage or MaxRAMPercentage mode.
+`JVM_OPTS` and `JVM_XX_OPTS` pass space-separated arguments through to the
+image. Set heap sizes in their dedicated fields so a later argument does
+not override the preview. `USE_AIKAR_FLAGS` enables the image's own preset.
 
 ## Logs (including install)
 

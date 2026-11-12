@@ -23,7 +23,7 @@ spec:
   displayName: Minecraft (Java Edition)
   game: minecraft-java
   # Kept in lockstep with module.yaml's bundle version from 2.5.0 onward.
-  version: 2.11.0
+  version: 2.12.0
   categories: [Sandbox, Survival, Building, Modded, Creative]
   # Brand color the dashboard tints this game's icon/accents with.
   accentColor: "#5b9a3e"
@@ -828,31 +828,41 @@ spec:
       type: int
       default: "10"
 
-    # The itzg image passes these to the JVM as -Xms/-Xmx. Left empty,
-    # the operator sizes both to 75% of the container memory limit
-    # (autoFromMemoryLimit — needs gameplane ≥ 0.2.0-beta.6; the
-    # remaining 25% is headroom for non-heap JVM memory, which is what
-    # keeps the cgroup from OOM-killing the server). Equal -Xms/-Xmx
-    # gives a fixed heap, which game servers prefer over GC-driven
-    # resizes.
     - name: MAX_MEMORY
       displayName: JVM max heap
       description: >-
-        Java heap ceiling (-Xmx, e.g. 2G, 3072M). Leave empty to size it
-        automatically to 75% of the container memory limit — it then
-        tracks the limit whenever you resize the server. If you set it
-        yourself, keep roughly 25% below the limit: the JVM needs
-        headroom for non-heap memory, and exceeding the limit gets the
-        server OOM-killed.
+        Heap ceiling, for example 2G or 65%. Leave empty for 75% of the
+        container memory limit. Allow room for memory outside the Java heap.
       type: string
+      applyOnRestart: true
       autoFromMemoryLimit:
         percent: 75
 
     - name: INIT_MEMORY
       displayName: JVM initial heap
       description: >-
-        Starting heap size (-Xms), at most JVM max heap. Leave empty to
-        match the automatic max heap (a fixed heap avoids GC resizes).
+        Starting heap, for example 512M or 37.5%. Leave empty for 75% of the
+        container memory limit. Keep the initial heap at or below the maximum.
       type: string
+      applyOnRestart: true
       autoFromMemoryLimit:
         percent: 75
+
+    - name: JVM_OPTS
+      displayName: Additional JVM options
+      description: Space-separated Java options, for example -Dfile.encoding=UTF-8.
+      type: string
+      applyOnRestart: true
+
+    - name: JVM_XX_OPTS
+      displayName: Additional JVM tuning options
+      description: Space-separated JVM tuning options, for example -XX:+PrintCommandLineFlags.
+      type: string
+      applyOnRestart: true
+
+    - name: USE_AIKAR_FLAGS
+      displayName: Use Aikar's flags
+      description: Let the image select its Aikar garbage collection flags for this JVM and heap.
+      type: bool
+      default: "false"
+      applyOnRestart: true

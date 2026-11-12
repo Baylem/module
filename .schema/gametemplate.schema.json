@@ -943,6 +943,10 @@
           "items": {
             "description": "ConfigField is a single user-tunable setting surfaced in the wizard.",
             "properties": {
+              "applyOnRestart": {
+                "description": "ApplyOnRestart stages this environment value for the next container start.\nEdits and clears update the config Secret without rolling the game Pod.\nConfig files that reference the field are refreshed by their init container\non the next Pod start. Other fields keep their usual rollout behavior.",
+                "type": "boolean"
+              },
               "autoFromMemoryLimit": {
                 "description": "AutoFromMemoryLimit, when set, computes this field's value from the\ngame container's effective memory limit whenever neither\nGameServer.spec.config nor Default provides one: floor(limit \u00d7\npercent / 100), rendered as whole mebibytes with an \"M\" suffix\n(e.g. \"6144M\"). Lets templates size game memory settings (like a\nJVM heap) to whatever resources the server was given instead of a\nstatic default \u2014 an explicit user value always wins, and a template\nwithout a memory limit leaves the field unset.",
                 "properties": {
@@ -1033,7 +1037,13 @@
               "name",
               "type"
             ],
-            "type": "object"
+            "type": "object",
+            "x-kubernetes-validations": [
+              {
+                "message": "applyOnRestart requires an environment field",
+                "rule": "!has(self.applyOnRestart) || !self.applyOnRestart || !has(self.target) || self.target == 'env'"
+              }
+            ]
           },
           "type": "array"
         },
