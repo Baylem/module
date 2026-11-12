@@ -2,10 +2,10 @@
 apiVersion: gameplane.local/module/v1
 name: ark-survival-evolved
 displayName: "ARK: Survival Evolved"
-version: 2.0.0
+version: 2.0.1
 game: ark-survival-evolved
 categories: [Survival, Open World, Multiplayer, Dinosaurs]
-summary: "ARK: Survival Evolved dedicated server with Source RCON console, cluster travel support, and persistent world state."
+summary: "ARK: Survival Evolved with Source RCON, cluster travel, and persistent worlds. For 1.x upgrades, stop and back up first. Move 1.0 saves to /app/server/ShooterGame/Saved or the 1.1 install to /app/server, and transfers to /cluster."
 homepage: https://survivetheark.com/
 license: MIT
 gameplaneMinVersion: 0.2.0-beta.7

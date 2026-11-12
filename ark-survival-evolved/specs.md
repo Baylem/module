@@ -73,6 +73,7 @@ Declared ports under `spec.ports`:
         - "DoExit"
   ```
 - **Signal Handling**: The image traps `SIGTERM`/`SIGINT` and stops the server through arkmanager, which saves first.
+- **1.x migration**: Before the image starts, the game container checks the primary and cluster mount points, the 1.0 Saved-only layout, the 1.1 install layout and transfer files left under `server/ShooterGame/Saved/clusters`. On failure it exits 78 with a recovery message. It hands PID 1 to the pinned vendor entrypoint after these checks pass.
 
 ---
 
