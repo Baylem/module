@@ -37,11 +37,14 @@ The image starts as root and drops to the `steam` user (UID/GID 1000) in its ent
 
 ## Upgrading from 1.x
 
-Version 1.x ran a Gameplane-built image with the volume at `/data`. Version 2.0.0 changes three things:
+Schedule downtime before adopting 2.x. Version 1.0 mounted the primary claim directly at `/serverdata/ShooterGame/Saved`. Version 1.1 mounted the whole install at `/data`. Version 2.x mounts the same claim at `/app` and reads `server/ShooterGame/Saved`. Starting 2.0.0 with either old layout can create a second world. Use 2.0.1 or later for the startup check.
 
-- **Data layout.** The install and saves move from the volume root to `server/` inside it. Before you start an existing server on 2.0.0, stop it and move everything at the root of its data volume into a new `server/` subfolder. If you skip this, the server installs again and starts a new world.
-- **Cluster data.** It moves from `ShooterGame/Saved/clusters` to the new `/cluster` volume. Copy the folder contents over if you use cluster travel.
-- **Config keys.** `MAP_NAME` is now `SERVER_MAP`, and `RCON_PASSWORD` is gone because the operator manages the RCON password. Rename or remove those keys in each GameServer, or the operator rejects it as having unknown config keys.
+1. Stop the GameServer and any other shard that writes these transfers. Wait for their game Pods to exit. Back up the primary PVC and any existing cluster PVC. Keep those backups until the world and transfers have been verified in game.
+2. Mount the primary PVC at `/app` for maintenance. For a **1.0 Saved-only claim**, move its saved data, including `SavedArks` and `Config`, into `/app/server/ShooterGame/Saved`. For a **1.1 full-install claim**, move its install, including `ShooterGame`, `Engine` and `steamapps` if present, into `/app/server`. Preserve ownership and permissions. Verify the expected map, character profiles and tribes in the destination. If both layouts contain saves, compare them and choose the intended world before moving either.
+3. Mount the cluster PVC at `/cluster`. Copy all old transfers, including hidden and nested files, from the 1.0 claim’s `clusters/` or the 1.1 install’s `ShooterGame/Saved/clusters/` to the matching paths on that PVC. Compare the source and destination contents. Archive the verified old transfers outside the live install. No `clusters/` directory should remain at `/app` or `/app/server`; the old `/app/server/ShooterGame/Saved/clusters` may contain empty directories.
+4. Rename `MAP_NAME` to `SERVER_MAP` and remove `RCON_PASSWORD` from GameServer configuration. The operator manages the RCON password. Start the game, load the intended world and verify a known player or tribe and any cluster transfers before reopening it.
+
+If the log or Kubernetes termination message begins with `ARK storage check`, keep the game stopped and inspect the named path. Version 2.0.1 checks both mounts before invoking the vendor entrypoint. A missing mount, old install, unreadable path, or residual cluster transfer blocks startup and leaves both volumes intact.
 
 ## Sample
 

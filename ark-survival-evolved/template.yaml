@@ -20,13 +20,16 @@ metadata:
 spec:
   displayName: "ARK: Survival Evolved"
   game: ark-survival-evolved
-  version: 2.0.0
+  version: 2.0.1
   categories: [Survival, Open World, Multiplayer, Dinosaurs]
   accentColor: "#00b2e2"
   description: |
     ARK: Survival Evolved dedicated server. Source RCON powers remote administration
     and server actions. The game install and world saves live under `/app/server`;
     cross-shard cluster transfers live in their own volume at `/cluster`.
+    To upgrade, stop the server and back up its PVC. Move a 1.1 install into
+    `/app/server`, or 1.0 saved data into `/app/server/ShooterGame/Saved`.
+    Move cluster transfers to `/cluster`. Old data in either layout blocks startup.
 
   image: hermsi/ark-server:latest@sha256:ce291990613e76f7019be31b96fe247188ce4957724c913c0e30097042c44bf5
 
@@ -35,6 +38,48 @@ spec:
       displayName: "Latest"
       image: hermsi/ark-server:latest-1794213856@sha256:ce291990613e76f7019be31b96fe247188ce4957724c913c0e30097042c44bf5
       default: true
+
+  # The vendor entrypoint can install a new world before an admin notices the
+  # 1.x world on the same claim. Inspect both mounts before running vendor code.
+  command: ["/bin/sh", "-ec"]
+  args:
+    - |
+      refuse() {
+        message="ARK storage check: $1. Stop the server and back up both PVCs. Move the 1.1 install to /app/server or 1.0 saves to /app/server/ShooterGame/Saved. Move old cluster transfers to /cluster. Verify copies before archiving leftovers. See the module README."
+        printf '%s\n' "$message" >&2
+        if [ -w /dev/termination-log ]; then printf '%s\n' "$message" > /dev/termination-log || :; fi
+        exit 78
+      }
+      [ "$ARK_SERVER_VOLUME" = /app ] || refuse "the vendor data path must be /app"
+      for mount in /app /cluster; do
+        [ ! -L "$mount" ] && [ -d "$mount" ] && [ -r "$mount" ] && [ -x "$mount" ] &&
+          /usr/bin/mountpoint -q "$mount" || refuse "missing or inaccessible PVC at $mount"
+      done
+      # GNU find returns nonzero on a traversal error or when its batched
+      # command fails. Stop at the first match, even a dangling symlink.
+      no_saved_root() {
+        /usr/bin/find "$1" -mindepth 1 -maxdepth 1 \
+          \( -name 'SavedArks*' -o -name SaveGames -o -name clusters -o -name Config -o -iname '*.ark*' \) \
+          -exec /bin/false {} + -quit || refuse "1.0 save data or unreadable entries at $1"
+      }
+      no_saved_root /app
+      /usr/bin/find /app -mindepth 1 -maxdepth 1 \( -name ShooterGame -o -name Engine -o -name steamapps \) \
+        -exec /bin/false {} + -quit || refuse "1.1 install or unreadable entries at /app"
+      old=/app/server/ShooterGame/Saved/clusters
+      parent=/app
+      for name in server ShooterGame Saved clusters; do
+        /usr/bin/find "$parent" -mindepth 1 -maxdepth 1 -name "$name" \
+          \( ! -type d -o ! -readable -o ! -executable \) -exec /bin/false {} + -quit ||
+          refuse "cannot inspect $parent/$name"
+        parent="$parent/$name"
+        [ -d "$parent" ] || break
+        if [ "$parent" = /app/server ]; then no_saved_root "$parent"; fi
+      done
+      if [ -d "$old" ]; then
+        /usr/bin/find "$old" -mindepth 1 ! -type d -exec /bin/false {} + -quit ||
+          refuse "unmigrated transfers or unreadable entries at $old"
+      fi
+      exec /docker-entrypoint.sh
 
   # The image starts as root: its entrypoint fixes volume ownership, loads
   # the crontab, then drops to the `steam` user (UID/GID 1000) with gosu.
