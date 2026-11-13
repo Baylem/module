@@ -23,7 +23,7 @@ spec:
   displayName: Minecraft (Java Edition)
   game: minecraft-java
   # Kept in lockstep with module.yaml's bundle version from 2.5.0 onward.
-  version: 2.11.0
+  version: 2.11.1
   categories: [Sandbox, Survival, Building, Modded, Creative]
   # Brand color the dashboard tints this game's icon/accents with.
   accentColor: "#5b9a3e"
@@ -802,10 +802,14 @@ spec:
       type: string
       default: ""
 
+    # The config key stays WHITELIST_ENABLED so saved server values keep
+    # working, but the itzg image only turns on white-list for
+    # ENABLE_WHITELIST (it also sets enforce-whitelist with it).
     - name: WHITELIST_ENABLED
       displayName: Enforce whitelist
       type: bool
       default: "false"
+      envName: ENABLE_WHITELIST
 
     - name: PVP
       displayName: PvP enabled
