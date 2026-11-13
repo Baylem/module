@@ -802,10 +802,14 @@ spec:
       type: string
       default: ""
 
+    # The config key stays WHITELIST_ENABLED so saved server values keep
+    # working, but the itzg image only turns on white-list for
+    # ENABLE_WHITELIST (it also sets enforce-whitelist with it).
     - name: WHITELIST_ENABLED
       displayName: Enforce whitelist
       type: bool
       default: "false"
+      envName: ENABLE_WHITELIST
 
     - name: PVP
       displayName: PvP enabled
